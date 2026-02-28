@@ -1,0 +1,2078 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Crystal Carwash – Profesjonell Bilvask i Sarpsborg</title>
+  <meta name="description" content="Crystal Carwash – vi kommer hjem til deg! Profesjonell mobil bilvask, polering og keramisk coating i Sarpsborg og Østfold. Ring 96 96 97 47."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml"/>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Crystal Carwash – Profesjonell Bilvask i Sarpsborg"/>
+  <meta property="og:description" content="Vi kommer hjem til deg! Profesjonell mobil bilvask, polering og keramisk coating i Sarpsborg og Østfold. Ring 96 96 97 47."/>
+  <meta property="og:image" content="https://crystalcarwash.no/images/lamborghini.jpg"/>
+  <meta property="og:url" content="https://crystalcarwash.no"/>
+  <meta property="og:locale" content="nb_NO"/>
+
+  <!-- LocalBusiness structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Crystal Carwash",
+    "description": "Profesjonell mobil bilvask, polering og keramisk coating i Sarpsborg og Østfold. Vi henter og leverer bilen din.",
+    "telephone": "+4796969747",
+    "email": "crystalcarwash_rana@hotmail.com",
+    "url": "https://crystalcarwash.no",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Sarpsborg",
+      "addressRegion": "Østfold",
+      "addressCountry": "NO"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 59.2839,
+      "longitude": 11.1094
+    },
+    "areaServed": ["Sarpsborg", "Fredrikstad", "Halden", "Moss", "Østfold", "Oslo", "Akershus"],
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "08:00",
+      "closes": "20:00"
+    },
+    "image": "https://crystalcarwash.no/images/lamborghini.jpg",
+    "priceRange": "1200–15000 NOK",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Bilvask og bilpleietjenester",
+      "itemListElement": [
+        {"@type": "Offer", "name": "Diamant Innvendig", "price": "1200", "priceCurrency": "NOK"},
+        {"@type": "Offer", "name": "Premiumvask", "price": "1700", "priceCurrency": "NOK"},
+        {"@type": "Offer", "name": "Diamantvask", "price": "2600", "priceCurrency": "NOK"},
+        {"@type": "Offer", "name": "Keramisk Coating", "price": "8000", "priceCurrency": "NOK"}
+      ]
+    },
+    "sameAs": [
+      "https://www.instagram.com/crystalcarwash_rana",
+      "https://www.facebook.com/people/CrystalCarwash/61561924269605/"
+    ]
+  }
+  </script>
+
+  <style>
+    /* ─── RESET ─────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --blue:       #3AADE0;
+      --blue-dark:  #1E8FBF;
+      --blue-glow:  rgba(58,173,224,0.18);
+      --blue-border:rgba(58,173,224,0.22);
+      --bg:         #07090B;
+      --bg2:        #0D1117;
+      --bg3:        #131920;
+      --card:       #0F1923;
+      --border:     rgba(255,255,255,0.07);
+      --text:       #E8EDF2;
+      --muted:      #6B7A8D;
+      --radius:     14px;
+      --radius-sm:  8px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); overflow-x:hidden; line-height:1.6; }
+    a { text-decoration:none; color:inherit; }
+    img { max-width:100%; display:block; }
+    ::-webkit-scrollbar { width:5px; }
+    ::-webkit-scrollbar-track { background:var(--bg); }
+    ::-webkit-scrollbar-thumb { background:var(--blue-dark); border-radius:3px; }
+
+    /* ─── NAVBAR ─────────────────────────────────── */
+    #navbar {
+      position:fixed; top:0; left:0; right:0; z-index:1000;
+      display:flex; align-items:center; justify-content:space-between;
+      padding:0 6%; height:72px;
+      background:rgba(7,9,11,0.85);
+      backdrop-filter:blur(20px) saturate(180%);
+      border-bottom:1px solid var(--border);
+      transition:height .3s, background .3s;
+    }
+    #navbar.scrolled { height:60px; background:rgba(7,9,11,0.97); }
+    section[id] { scroll-margin-top: 84px; }
+    .nav-logo { display:flex; align-items:center; }
+    .nav-logo img { height:48px; width:auto; }
+    .nav-links { display:flex; align-items:center; gap:2.2rem; list-style:none; }
+    .nav-links a {
+      font-family:'Montserrat',sans-serif; font-size:.8rem; font-weight:600;
+      letter-spacing:.1em; text-transform:uppercase; color:var(--muted);
+      transition:color .2s;
+    }
+    .nav-links a:hover { color:var(--text); }
+    .nav-cta {
+      background:var(--blue) !important; color:#fff !important;
+      padding:9px 22px; border-radius:50px;
+      font-size:.78rem !important; transition:background .2s, transform .2s !important;
+    }
+    .nav-cta:hover { background:var(--blue-dark) !important; transform:translateY(-1px); }
+    .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none; padding:0; }
+    .hamburger span { display:block; width:24px; height:2px; background:var(--text); border-radius:2px; transition:all .3s; }
+    .mobile-nav {
+      display:none; position:fixed; inset:0; top:72px; z-index:999;
+      background:rgba(7,9,11,.98); padding:2.5rem 6%;
+      flex-direction:column; gap:1.8rem;
+    }
+    .mobile-nav.open { display:flex; }
+    .mobile-nav a {
+      font-family:'Montserrat',sans-serif; font-size:1.1rem; font-weight:700;
+      letter-spacing:.08em; text-transform:uppercase; color:var(--muted);
+      padding-bottom:1.2rem; border-bottom:1px solid var(--border);
+      transition:color .2s;
+    }
+    .mobile-nav a:last-child { border:none; }
+    .mobile-nav a:hover { color:var(--blue); }
+
+    /* ─── HERO ─────────────────────────────────── */
+    #hjem {
+      position:relative; min-height:100vh;
+      display:flex; align-items:center; justify-content:center;
+      overflow:hidden;
+    }
+    .hero-bg {
+      position:absolute; inset:0;
+      background:url('images/lamborghini.jpg') center 40% / cover no-repeat;
+    }
+    .hero-overlay {
+      position:absolute; inset:0;
+      background:linear-gradient(160deg,rgba(7,9,11,.82) 0%,rgba(7,9,11,.55) 55%,rgba(7,20,40,.75) 100%);
+    }
+    .hero-content {
+      position:relative; z-index:2;
+      max-width:820px; padding:0 6%; text-align:center;
+    }
+    .hero-pill {
+      display:inline-flex; align-items:center; gap:.5rem;
+      background:rgba(58,173,224,.1); border:1px solid var(--blue-border);
+      color:#7DD3F8; font-family:'Montserrat',sans-serif;
+      font-size:.72rem; font-weight:700; letter-spacing:.18em; text-transform:uppercase;
+      padding:7px 18px; border-radius:50px; margin-bottom:2rem;
+    }
+    .hero-pill span { width:6px; height:6px; background:var(--blue); border-radius:50%; animation:blink 1.8s infinite; }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.3} }
+    .hero-title {
+      font-family:'Montserrat',sans-serif;
+      font-size:clamp(2.6rem,6.5vw,5.2rem);
+      font-weight:900; line-height:1.06; letter-spacing:-.03em;
+      margin-bottom:1.4rem;
+      text-shadow:0 4px 40px rgba(0,0,0,.6);
+    }
+    .hero-title .accent { color:var(--blue); }
+    .hero-title .line2 { display:block; }
+    .hero-sub {
+      font-size:clamp(.95rem,2vw,1.15rem);
+      color:rgba(232,237,242,.72); font-weight:400; line-height:1.75;
+      max-width:580px; margin:0 auto 2.8rem;
+    }
+    .hero-actions { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
+    .btn-primary {
+      display:inline-flex; align-items:center; gap:.6rem;
+      background:var(--blue); color:#fff;
+      padding:15px 32px; border-radius:50px;
+      font-family:'Montserrat',sans-serif; font-size:.86rem; font-weight:700;
+      letter-spacing:.07em; text-transform:uppercase; border:none; cursor:pointer;
+      box-shadow:0 4px 24px rgba(58,173,224,.35);
+      transition:all .25s;
+    }
+    .btn-primary:hover { background:var(--blue-dark); transform:translateY(-2px); box-shadow:0 8px 32px rgba(58,173,224,.45); }
+    .btn-outline {
+      display:inline-flex; align-items:center; gap:.6rem;
+      background:transparent; color:var(--text);
+      padding:14px 32px; border-radius:50px;
+      font-family:'Montserrat',sans-serif; font-size:.86rem; font-weight:600;
+      letter-spacing:.07em; text-transform:uppercase;
+      border:1.5px solid rgba(255,255,255,.25); cursor:pointer;
+      transition:all .25s;
+    }
+    .btn-outline:hover { border-color:var(--blue); color:var(--blue); transform:translateY(-2px); }
+    .hero-scroll {
+      position:absolute; bottom:2.2rem; left:50%; transform:translateX(-50%);
+      display:flex; flex-direction:column; align-items:center; gap:.5rem;
+      font-family:'Montserrat',sans-serif; font-size:.65rem; letter-spacing:.15em;
+      text-transform:uppercase; color:rgba(255,255,255,.3);
+      animation:float 2.5s ease-in-out infinite;
+    }
+    .hero-scroll-line { width:1px; height:40px; background:linear-gradient(to bottom,var(--blue),transparent); }
+    @keyframes float { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(8px)} }
+
+    /* ─── STATS ─────────────────────────────────── */
+    .stats-strip {
+      background:var(--bg2);
+      border-top:1px solid var(--border);
+      border-bottom:1px solid var(--border);
+      display:grid; grid-template-columns:repeat(4,1fr);
+    }
+    .stat {
+      padding:2.2rem 1rem; text-align:center;
+      border-right:1px solid var(--border);
+    }
+    .stat:last-child { border-right:none; }
+    .stat-val {
+      font-family:'Montserrat',sans-serif;
+      font-size:1.9rem; font-weight:900; color:var(--blue);
+      letter-spacing:-.02em;
+    }
+    .stat-lbl { font-size:.75rem; color:var(--muted); margin-top:.3rem; letter-spacing:.04em; }
+
+    /* ─── SECTION BASE ─────────────────────────── */
+    section { padding:7rem 6%; }
+    .sec-label {
+      font-family:'Montserrat',sans-serif; font-size:.7rem; font-weight:700;
+      letter-spacing:.2em; text-transform:uppercase; color:var(--blue);
+      margin-bottom:.9rem;
+    }
+    .sec-title {
+      font-family:'Montserrat',sans-serif;
+      font-size:clamp(1.8rem,3.5vw,2.8rem); font-weight:900;
+      line-height:1.1; letter-spacing:-.02em; margin-bottom:1.1rem;
+    }
+    .sec-title span { color:var(--blue); }
+    .sec-desc { color:var(--muted); font-size:.97rem; line-height:1.75; max-width:560px; }
+    .sec-head { margin-bottom:3.5rem; }
+    .sec-head.center { text-align:center; }
+    .sec-head.center .sec-desc { margin:0 auto; }
+
+    /* ─── HOW IT WORKS ─────────────────────────── */
+    #slik-fungerer { background:var(--bg2); }
+    .journey { display:grid; grid-template-columns:1fr 64px 1fr 64px 1fr; align-items:start; gap:0; margin-bottom:2.5rem; }
+    .journey-step {
+      background:var(--card); border:1px solid var(--border); border-radius:var(--radius);
+      overflow:hidden; transition:all .35s; position:relative;
+    }
+    .journey-step:hover { border-color:var(--blue-border); transform:translateY(-6px); box-shadow:0 24px 60px rgba(0,0,0,.45); }
+    .journey-visual {
+      position:relative; padding:2.5rem 1.5rem 1.5rem;
+      background:linear-gradient(160deg,rgba(58,173,224,.07),transparent 70%);
+      border-bottom:1px solid var(--border);
+      display:flex; align-items:center; justify-content:center; min-height:200px;
+    }
+    .journey-num {
+      position:absolute; top:1rem; left:1.4rem;
+      font-family:'Montserrat',sans-serif; font-size:4rem; font-weight:900;
+      color:rgba(58,173,224,.1); line-height:1; user-select:none;
+    }
+    .journey-num-accent {
+      position:absolute; top:1.1rem; right:1.4rem;
+      width:28px; height:28px; border-radius:50%;
+      background:var(--blue); display:flex; align-items:center; justify-content:center;
+      font-family:'Montserrat',sans-serif; font-size:.72rem; font-weight:800; color:#fff;
+    }
+    .journey-svg { width:150px; height:150px; display:block; }
+    .journey-body { padding:1.8rem 1.8rem 2rem; }
+    .journey-body h3 { font-family:'Montserrat',sans-serif; font-size:1.1rem; font-weight:800; margin-bottom:.6rem; letter-spacing:-.01em; }
+    .journey-body p { color:var(--muted); font-size:.87rem; line-height:1.7; }
+    .journey-body .jstep-cta { margin-top:1.2rem; }
+    .journey-connector {
+      display:flex; align-items:center; justify-content:center; padding-top:100px;
+    }
+    .journey-connector svg { width:50px; height:20px; overflow:visible; }
+    .j-dash { stroke-dasharray:5 4; animation:dashmove 1.2s linear infinite; }
+    @keyframes dashmove { to { stroke-dashoffset:-18; } }
+    .journey-banner {
+      background:linear-gradient(135deg,rgba(58,173,224,.09),rgba(30,143,191,.05));
+      border:1px solid var(--blue-border); border-radius:var(--radius); padding:2rem 2.5rem;
+    }
+    .jb-inner { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1.5rem; }
+    .jb-text { display:flex; align-items:baseline; gap:.75rem; flex-wrap:wrap; }
+    .jb-big { font-family:'Montserrat',sans-serif; font-size:clamp(1.2rem,2.5vw,1.6rem); font-weight:900; }
+    .jb-sep { font-family:'Montserrat',sans-serif; font-size:clamp(1.2rem,2.5vw,1.6rem); font-weight:300; color:var(--blue); }
+    @media (max-width:900px) {
+      .journey { grid-template-columns:1fr; }
+      .journey-connector { padding-top:0; padding:1rem 0; transform:rotate(90deg); height:60px; }
+    }
+
+    /* ─── SERVICES ─────────────────────────────── */
+    #tjenester { background:var(--bg); }
+    .services-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.2rem; }
+    .srv-card {
+      background:var(--card); border:1px solid var(--border);
+      border-radius:var(--radius); overflow:hidden;
+      transition:all .3s; position:relative;
+    }
+    .srv-card::after {
+      content:''; position:absolute; inset:0;
+      border-radius:var(--radius);
+      border:1px solid transparent;
+      transition:border-color .3s;
+      pointer-events:none;
+    }
+    .srv-card:hover { transform:translateY(-5px); box-shadow:0 20px 50px rgba(0,0,0,.4); }
+    .srv-card:hover::after { border-color:var(--blue-border); }
+    .srv-img {
+      height:190px; overflow:hidden; background:var(--bg3);
+      position:relative;
+    }
+    .srv-img img { width:100%; height:100%; object-fit:cover; transition:transform .5s; }
+    .srv-card:hover .srv-img img { transform:scale(1.07); }
+    .srv-img-ph {
+      width:100%; height:100%; display:flex; align-items:center; justify-content:center;
+      font-size:2.8rem;
+      background:linear-gradient(135deg,var(--bg3),var(--card));
+    }
+    .srv-body { padding:1.6rem; }
+    .srv-body h3 { font-family:'Montserrat',sans-serif; font-size:1rem; font-weight:700; margin-bottom:.5rem; }
+    .srv-body p { color:var(--muted); font-size:.85rem; line-height:1.6; margin-bottom:1.1rem; }
+    .srv-tag {
+      display:inline-block; background:var(--blue-glow); color:#7DD3F8;
+      border:1px solid var(--blue-border); border-radius:50px;
+      font-family:'Montserrat',sans-serif; font-size:.72rem; font-weight:700;
+      letter-spacing:.06em; text-transform:uppercase; padding:5px 13px;
+    }
+
+    /* ─── GALLERY ─────────────────────────────── */
+    #galleri { background:var(--bg2); }
+    .gallery-grid {
+      display:grid;
+      grid-template-columns:repeat(12,1fr);
+      grid-template-rows:auto;
+      gap:8px;
+    }
+    .g-item {
+      border-radius:var(--radius-sm); overflow:hidden;
+      position:relative; cursor:pointer;
+      background:var(--bg3);
+    }
+    .g-item img { width:100%; height:100%; object-fit:cover; transition:transform .5s, filter .4s; display:block; }
+    .g-item:hover img { transform:scale(1.06); filter:brightness(1.1); }
+    .g-item .g-overlay {
+      position:absolute; inset:0;
+      background:linear-gradient(to top,rgba(0,0,0,.7) 0%,transparent 50%);
+      opacity:0; transition:opacity .3s; display:flex; align-items:flex-end; padding:1rem;
+    }
+    .g-item:hover .g-overlay { opacity:1; }
+    .g-overlay span {
+      font-family:'Montserrat',sans-serif; font-size:.75rem; font-weight:600;
+      color:#fff; letter-spacing:.06em; text-transform:uppercase;
+    }
+    /* Mosaic layout */
+    .g-item:nth-child(1) { grid-column:span 7; grid-row:span 2; min-height:380px; }
+    .g-item:nth-child(2) { grid-column:span 5; min-height:185px; }
+    .g-item:nth-child(3) { grid-column:span 5; min-height:185px; }
+    .g-item:nth-child(4) { grid-column:span 4; min-height:230px; }
+    .g-item:nth-child(5) { grid-column:span 4; min-height:230px; }
+    .g-item:nth-child(6) { grid-column:span 4; min-height:230px; }
+    .g-ph {
+      width:100%; height:100%; min-height:inherit;
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+      gap:.75rem; background:var(--bg3); color:var(--muted);
+    }
+    .g-ph svg { opacity:.3; }
+    .g-ph p { font-size:.78rem; letter-spacing:.06em; opacity:.5; }
+    .gallery-cta { text-align:center; margin-top:2rem; }
+    .gallery-cta p { color:var(--muted); font-size:.88rem; margin-bottom:1.2rem; }
+
+    /* ─── PRICING ─────────────────────────────── */
+    #priser { background:var(--bg); }
+    .tabs { display:flex; gap:.5rem; flex-wrap:wrap; margin-bottom:2.5rem; }
+    .tab {
+      padding:9px 20px; border-radius:50px;
+      font-family:'Montserrat',sans-serif; font-size:.76rem; font-weight:700;
+      letter-spacing:.07em; text-transform:uppercase;
+      border:1.5px solid var(--border); background:transparent; color:var(--muted);
+      cursor:pointer; transition:all .2s;
+    }
+    .tab:hover { border-color:rgba(58,173,224,.4); color:var(--text); }
+    .tab.active { background:var(--blue); border-color:var(--blue); color:#fff; }
+    .tab-panel { display:none; }
+    .tab-panel.active { display:block; }
+    .price-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:1.2rem; margin-bottom:1.5rem; }
+    .p-card {
+      background:var(--card); border:1px solid var(--border);
+      border-radius:var(--radius); padding:2rem 1.75rem;
+      transition:all .3s; position:relative;
+    }
+    .p-card.pop {
+      border-color:var(--blue);
+      box-shadow:0 0 0 1px var(--blue),0 12px 48px rgba(58,173,224,.15);
+    }
+    .p-card.pop::before {
+      content:'Mest populær';
+      position:absolute; top:-13px; left:50%; transform:translateX(-50%);
+      background:var(--blue); color:#fff; white-space:nowrap;
+      font-family:'Montserrat',sans-serif; font-size:.68rem; font-weight:700;
+      letter-spacing:.1em; text-transform:uppercase;
+      padding:5px 14px; border-radius:50px;
+    }
+    .p-card:hover:not(.pop) { border-color:var(--blue-border); transform:translateY(-3px); }
+    .p-card h3 { font-family:'Montserrat',sans-serif; font-size:1rem; font-weight:700; margin-bottom:.2rem; }
+    .p-sub { font-size:.74rem; color:var(--muted); text-transform:uppercase; letter-spacing:.07em; margin-bottom:1.4rem; }
+    .p-price { font-family:'Montserrat',sans-serif; font-size:2rem; font-weight:900; color:var(--blue); line-height:1; margin-bottom:.25rem; }
+    .p-price small { font-size:.9rem; font-weight:400; color:var(--muted); }
+    .p-note { font-size:.76rem; color:var(--muted); margin-bottom:1.4rem; }
+    .p-divider { height:1px; background:var(--border); margin:1.4rem 0; }
+    .p-features { list-style:none; display:flex; flex-direction:column; gap:.55rem; }
+    .p-features li {
+      font-size:.83rem; color:rgba(232,237,242,.75);
+      display:flex; align-items:flex-start; gap:.55rem; line-height:1.45;
+    }
+    .p-features li::before { content:'✓'; color:var(--blue); font-weight:700; font-size:.8rem; flex-shrink:0; margin-top:1px; }
+    .extras { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:.8rem; }
+    .extra {
+      background:var(--card); border:1px solid var(--border); border-radius:var(--radius-sm);
+      padding:1.1rem 1.2rem;
+      display:flex; justify-content:space-between; align-items:center;
+      transition:border-color .2s;
+    }
+    .extra:hover { border-color:var(--blue-border); }
+    .extra-nm { font-size:.85rem; color:var(--text); }
+    .extra-pr { font-family:'Montserrat',sans-serif; font-size:.88rem; font-weight:700; color:var(--blue); margin-left:.8rem; white-space:nowrap; }
+    .price-note-box {
+      background:var(--card); border:1px solid var(--blue-border); border-radius:var(--radius-sm);
+      padding:1.1rem 1.5rem;
+    }
+    .price-note-box p { font-size:.85rem; color:var(--muted); line-height:1.6; }
+    .price-note-box strong { color:#7DD3F8; }
+
+    /* ─── INSTAGRAM FEED ──────────────────────── */
+    #instagram { background:var(--bg2); }
+    .ig-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:6px; }
+    .ig-item {
+      aspect-ratio:1; overflow:hidden; border-radius:var(--radius-sm);
+      position:relative; background:var(--bg3); cursor:pointer;
+    }
+    .ig-item img { width:100%; height:100%; object-fit:cover; transition:transform .4s, filter .4s; }
+    .ig-item:hover img { transform:scale(1.08); filter:brightness(1.1); }
+    .ig-item .ig-ov {
+      position:absolute; inset:0; background:rgba(58,173,224,.25);
+      display:flex; align-items:center; justify-content:center;
+      opacity:0; transition:opacity .3s;
+    }
+    .ig-item:hover .ig-ov { opacity:1; }
+    .ig-ph {
+      width:100%; height:100%;
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+      gap:.5rem; color:var(--muted); font-size:.7rem;
+    }
+    .ig-ph svg { opacity:.25; }
+    .ig-follow {
+      margin-top:1.5rem; text-align:center;
+    }
+    .ig-follow a {
+      display:inline-flex; align-items:center; gap:.6rem;
+      background:var(--card); border:1px solid var(--border);
+      padding:12px 24px; border-radius:50px; color:var(--text);
+      font-family:'Montserrat',sans-serif; font-size:.8rem; font-weight:700;
+      letter-spacing:.07em; text-transform:uppercase;
+      transition:all .25s;
+    }
+    .ig-follow a:hover { border-color:var(--blue); color:var(--blue); }
+
+    /* ─── ABOUT ───────────────────────────────── */
+    #om-oss { background:var(--bg); }
+    .about-wrap { display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:center; }
+    .about-img-col { position:relative; }
+    .about-img-col img { width:100%; height:500px; object-fit:cover; border-radius:var(--radius); }
+    .about-badge {
+      position:absolute; bottom:2rem; left:2rem;
+      background:linear-gradient(135deg,var(--blue-dark),var(--blue));
+      padding:1.2rem 1.6rem; border-radius:12px;
+      box-shadow:0 8px 30px rgba(58,173,224,.35);
+    }
+    .about-badge .big { font-family:'Montserrat',sans-serif; font-size:1.8rem; font-weight:900; line-height:1; }
+    .about-badge .sm { font-size:.8rem; opacity:.9; margin-top:.25rem; }
+    .about-text .sec-desc { max-width:100%; }
+    .about-text p { color:var(--muted); font-size:.93rem; line-height:1.8; margin-bottom:1rem; }
+    .about-text p strong { color:var(--text); }
+    .chips { display:flex; flex-wrap:wrap; gap:.6rem; margin-top:1.8rem; }
+    .chip {
+      display:flex; align-items:center; gap:.4rem;
+      background:var(--card); border:1px solid var(--border);
+      padding:7px 14px; border-radius:50px;
+      font-size:.8rem; color:var(--text);
+    }
+    .chip::before { content:''; width:6px; height:6px; background:var(--blue); border-radius:50%; flex-shrink:0; }
+    .about-text .btn-primary { margin-top:2rem; }
+
+    /* ─── AREA BANNER ────────────────────────── */
+    .area-banner {
+      background:linear-gradient(135deg,#091929 0%,#0d2340 100%);
+      border-top:1px solid var(--blue-border); border-bottom:1px solid var(--blue-border);
+      padding:3.5rem 6%; text-align:center;
+    }
+    .area-banner h2 { font-family:'Montserrat',sans-serif; font-size:clamp(1.3rem,3vw,1.9rem); font-weight:800; margin-bottom:.75rem; }
+    .area-banner p { color:rgba(232,237,242,.7); font-size:.93rem; margin-bottom:1.8rem; }
+    .area-tags { display:flex; gap:.6rem; flex-wrap:wrap; justify-content:center; }
+    .area-tag {
+      background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.15);
+      padding:6px 16px; border-radius:50px;
+      font-family:'Montserrat',sans-serif; font-size:.8rem; font-weight:600; color:var(--text);
+    }
+
+    /* ─── CONTACT ─────────────────────────────── */
+    #kontakt { background:var(--bg2); }
+    .contact-wrap { display:grid; grid-template-columns:1fr 1.3fr; gap:4rem; align-items:start; }
+    .cinfo { display:flex; flex-direction:column; gap:1.8rem; }
+    .ci {
+      display:flex; align-items:flex-start; gap:1rem;
+      background:var(--card); border:1px solid var(--border);
+      border-radius:var(--radius-sm); padding:1.3rem;
+      transition:border-color .25s;
+    }
+    .ci:hover { border-color:var(--blue-border); }
+    .ci-icon {
+      width:44px; height:44px; flex-shrink:0; border-radius:10px;
+      background:var(--blue-glow); border:1px solid var(--blue-border);
+      display:flex; align-items:center; justify-content:center; font-size:1.1rem;
+    }
+    .ci-lbl { font-size:.7rem; font-family:'Montserrat',sans-serif; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin-bottom:.25rem; }
+    .ci-val { font-size:.93rem; color:var(--text); }
+    .ci-val a { color:var(--text); transition:color .2s; }
+    .ci-val a:hover { color:var(--blue); }
+    .cform {
+      background:var(--card); border:1px solid var(--border);
+      border-radius:var(--radius); padding:2.5rem;
+    }
+    .cform h3 { font-family:'Montserrat',sans-serif; font-size:1.2rem; font-weight:700; margin-bottom:1.8rem; }
+    .frow { display:grid; grid-template-columns:1fr 1fr; gap:.9rem; }
+    .fg { display:flex; flex-direction:column; gap:.45rem; margin-bottom:.9rem; }
+    .fg label { font-size:.72rem; font-family:'Montserrat',sans-serif; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); }
+    .fg input, .fg select, .fg textarea {
+      background:var(--bg3); border:1px solid var(--border);
+      border-radius:var(--radius-sm); padding:11px 14px;
+      color:var(--text); font-family:'Inter',sans-serif; font-size:.9rem;
+      outline:none; width:100%; transition:border-color .2s;
+      -webkit-appearance:none;
+    }
+    .fg input::placeholder, .fg textarea::placeholder { color:var(--muted); }
+    .fg input:focus, .fg select:focus, .fg textarea:focus { border-color:var(--blue); }
+    .fg select option { background:var(--bg2); }
+    .fg textarea { resize:vertical; min-height:100px; }
+    .fsub {
+      width:100%; background:var(--blue); color:#fff;
+      padding:13px; border-radius:50px; border:none; cursor:pointer;
+      font-family:'Montserrat',sans-serif; font-size:.85rem; font-weight:700;
+      letter-spacing:.08em; text-transform:uppercase; margin-top:.4rem;
+      transition:all .25s;
+    }
+    .fsub:hover { background:var(--blue-dark); transform:translateY(-2px); box-shadow:0 8px 28px rgba(58,173,224,.35); }
+    .f-ok {
+      display:none; margin-top:1rem; padding:1rem; background:rgba(58,173,224,.08);
+      border:1px solid var(--blue-border); border-radius:var(--radius-sm);
+      font-size:.85rem; color:#7DD3F8; text-align:center;
+    }
+
+    /* ─── FOOTER ─────────────────────────────── */
+    footer {
+      background:var(--bg); border-top:1px solid var(--border);
+      padding:3.5rem 6% 2rem;
+    }
+    .footer-top { display:grid; grid-template-columns:1.6fr 1fr 1fr; gap:3rem; margin-bottom:2.5rem; }
+    .f-logo img { height:46px; margin-bottom:1rem; }
+    .f-about { font-size:.85rem; color:var(--muted); line-height:1.7; }
+    .f-col h4 {
+      font-family:'Montserrat',sans-serif; font-size:.7rem; font-weight:700;
+      letter-spacing:.15em; text-transform:uppercase; color:rgba(255,255,255,.35);
+      margin-bottom:.9rem;
+    }
+    .f-links { display:flex; flex-direction:column; gap:.55rem; }
+    .f-links a { font-size:.85rem; color:var(--muted); transition:color .2s; }
+    .f-links a:hover { color:var(--blue); }
+    .footer-bot {
+      border-top:1px solid var(--border); padding-top:1.5rem;
+      display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;
+    }
+    .footer-bot p { font-size:.78rem; color:rgba(255,255,255,.2); }
+    .footer-bot a { color:var(--blue); }
+
+    /* ─── PHONE FLOAT ────────────────────────── */
+    .phone-fab {
+      position:fixed; bottom:2rem; right:2rem; z-index:998;
+      display:flex; align-items:center; gap:.7rem;
+      background:var(--blue); color:#fff;
+      padding:14px 22px; border-radius:50px;
+      font-family:'Montserrat',sans-serif; font-size:.82rem; font-weight:700;
+      box-shadow:0 6px 32px rgba(58,173,224,.45);
+      transition:all .3s;
+      animation:fabpulse 2.5s ease-in-out infinite;
+    }
+    .phone-fab:hover { background:var(--blue-dark); transform:translateY(-3px) scale(1.03); box-shadow:0 12px 40px rgba(58,173,224,.55); }
+    @keyframes fabpulse { 0%,100%{box-shadow:0 6px 32px rgba(58,173,224,.45)} 50%{box-shadow:0 6px 48px rgba(58,173,224,.72)} }
+    .phone-fab svg { width:16px; height:16px; flex-shrink:0; }
+
+    /* ─── SCROLL REVEAL ──────────────────────── */
+    .reveal { opacity:0; transform:translateY(28px); transition:opacity .65s ease, transform .65s ease; }
+    .reveal.d1 { transition-delay:.1s; }
+    .reveal.d2 { transition-delay:.2s; }
+    .reveal.d3 { transition-delay:.3s; }
+    .reveal.d4 { transition-delay:.4s; }
+    .reveal.show { opacity:1; transform:none; }
+
+    /* ─── RESPONSIVE ─────────────────────────── */
+    @media (max-width:1024px) {
+      .services-grid { grid-template-columns:repeat(2,1fr); }
+      .ig-grid { grid-template-columns:repeat(4,1fr); }
+      .ig-item:last-child { display:none; }
+    }
+    @media (max-width:900px) {
+      .nav-links { display:none; }
+      .hamburger { display:flex; }
+      .stats-strip { grid-template-columns:repeat(2,1fr); }
+      .stat:nth-child(2) { border-right:none; }
+      .steps { grid-template-columns:1fr; }
+      .about-wrap { grid-template-columns:1fr; gap:3rem; }
+      .contact-wrap { grid-template-columns:1fr; gap:2.5rem; }
+      .footer-top { grid-template-columns:1fr 1fr; }
+      .g-item:nth-child(1) { grid-column:span 12; min-height:280px; }
+      .g-item:nth-child(2),.g-item:nth-child(3) { grid-column:span 6; }
+      .g-item:nth-child(4),.g-item:nth-child(5),.g-item:nth-child(6) { grid-column:span 4; }
+    }
+    @media (max-width:640px) {
+      section { padding:4.5rem 5%; }
+      .services-grid { grid-template-columns:1fr; }
+      .ig-grid { grid-template-columns:repeat(3,1fr); }
+      .ig-item:nth-child(n+4) { display:none; }
+      .footer-top { grid-template-columns:1fr; }
+      .frow { grid-template-columns:1fr; }
+      .phone-fab .fab-label { display:none; }
+      .phone-fab { padding:16px; border-radius:50%; }
+      .g-item:nth-child(4),.g-item:nth-child(5),.g-item:nth-child(6) { grid-column:span 6; }
+      .g-item:nth-child(6) { display:none; }
+    }
+
+    /* ─── REVIEWS ─────────────────────────────── */
+    #anmeldelser { background:var(--bg2); }
+    .reviews-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; }
+    .review-card {
+      background:var(--card); border:1px solid var(--border);
+      border-radius:var(--radius); padding:2rem;
+      display:flex; flex-direction:column; gap:1rem;
+      transition:all .3s;
+    }
+    .review-card:hover { border-color:var(--blue-border); transform:translateY(-4px); box-shadow:0 16px 48px rgba(0,0,0,.35); }
+    .review-stars { color:#F59E0B; font-size:1.1rem; letter-spacing:.12em; }
+    .review-text { color:rgba(232,237,242,.8); font-size:.9rem; line-height:1.75; flex:1; font-style:italic; }
+    .review-author { display:flex; align-items:center; gap:.8rem; margin-top:.5rem; }
+    .review-avatar {
+      width:40px; height:40px; border-radius:50%; flex-shrink:0;
+      background:linear-gradient(135deg,var(--blue-dark),var(--blue));
+      display:flex; align-items:center; justify-content:center;
+      font-family:'Montserrat',sans-serif; font-size:.9rem; font-weight:800; color:#fff;
+    }
+    .review-name { font-family:'Montserrat',sans-serif; font-size:.85rem; font-weight:700; }
+    .review-service { font-size:.75rem; color:var(--muted); margin-top:.15rem; }
+    @media (max-width:900px) { .reviews-grid { grid-template-columns:1fr; } }
+
+    /* ─── FAQ ────────────────────────────────── */
+    #faq { background:var(--bg); }
+    .faq-list { max-width:760px; margin:0 auto; display:flex; flex-direction:column; gap:.75rem; }
+    .faq-item {
+      background:var(--card); border:1px solid var(--border);
+      border-radius:var(--radius); overflow:hidden;
+      transition:border-color .2s;
+    }
+    .faq-item.open { border-color:var(--blue-border); }
+    .faq-q {
+      width:100%; display:flex; align-items:center; justify-content:space-between;
+      padding:1.3rem 1.6rem; background:transparent; border:none; cursor:pointer;
+      color:var(--text); text-align:left; gap:1rem;
+    }
+    .faq-q span { font-family:'Montserrat',sans-serif; font-size:.95rem; font-weight:600; }
+    .faq-icon { flex-shrink:0; color:var(--blue); transition:transform .3s; }
+    .faq-item.open .faq-icon { transform:rotate(180deg); }
+    .faq-a { display:none; padding:0 1.6rem 1.4rem; }
+    .faq-item.open .faq-a { display:block; }
+    .faq-a p { color:var(--muted); font-size:.9rem; line-height:1.75; }
+
+    /* ─── MINIMALIST OVERRIDES ───────────────────── */
+    :root {
+      --radius:    4px;
+      --radius-sm: 3px;
+    }
+
+    /* — Typography: remove heavy text-shadow —*/
+    .hero-title { text-shadow: none; font-weight: 800; }
+
+    /* — Hero pill: strip the glow + blinking dot — */
+    .hero-pill {
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.10);
+      color: var(--muted);
+    }
+    .hero-pill span { display: none; }
+
+    /* — Buttons: flat, sharp corners — */
+    .btn-primary {
+      border-radius: 4px;
+      box-shadow: none;
+      padding: 13px 28px;
+    }
+    .btn-primary:hover { transform: none; box-shadow: none; background: var(--blue-dark); }
+    .btn-outline { border-radius: 4px; padding: 12px 28px; }
+    .btn-outline:hover { transform: none; }
+    .nav-cta { border-radius: 4px !important; }
+    .fsub { border-radius: 4px; }
+
+    /* — Stats strip: remove inner dividers — */
+    .stats-strip { border-top: none; border-bottom: 1px solid var(--border); }
+    .stat { border-right: none; padding: 1.6rem 1rem; }
+    .stat-val { font-size: 1.5rem; }
+
+    /* — Service cards: no glow border on hover — */
+    .srv-card::after { display: none; }
+    .srv-card:hover { transform: translateY(-3px); box-shadow: none; }
+    .srv-tag {
+      background: transparent;
+      border: none;
+      color: var(--blue);
+      padding: 0;
+      font-size: .8rem;
+      letter-spacing: 0;
+    }
+    .srv-body { padding: 1.4rem 1.5rem 1.6rem; }
+    .srv-body h3 { font-size: .95rem; font-weight: 600; }
+
+    /* — Journey: no hover lift, no animated dash — */
+    .journey-step:hover { transform: none; box-shadow: none; border-color: var(--border); }
+    .journey-visual { background: none; min-height: 160px; }
+    .journey-banner { background: transparent; border: 1px solid var(--border); }
+    .j-dash { animation: none; stroke-dasharray: 4 4; }
+
+    /* — Price cards: no heavy pop shadow — */
+    .p-card.pop { box-shadow: none; }
+    .p-card:hover:not(.pop) { transform: none; }
+    .tab { border-radius: 4px; }
+
+    /* — Reviews: no hover lift — */
+    .review-card:hover { transform: none; box-shadow: none; border-color: var(--border); }
+
+    /* — Contact info items — */
+    .ci:hover { border-color: var(--border); }
+
+    /* — Phone FAB: no pulse, no rounded pill on desktop — */
+    .phone-fab {
+      border-radius: 4px;
+      box-shadow: none;
+      animation: none;
+    }
+    .phone-fab:hover { transform: none; box-shadow: none; }
+
+    /* — Scrollbar: thinner, neutral — */
+    ::-webkit-scrollbar { width: 3px; }
+    ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.10); }
+
+    /* — Chips: sharp — */
+    .chip { border-radius: 4px; }
+    .area-tag { border-radius: 4px; }
+    .ig-follow a { border-radius: 4px; }
+
+    /* — Remove float animation on scroll indicator — */
+    @keyframes float { 0%,100%{ transform:translateX(-50%) translateY(0) } }
+
+    /* ── Booking Wizard ────────────────────────── */
+    .step-indicator { display:flex; gap:.4rem; margin-bottom:.5rem; }
+    .step-dot { flex:1; height:2px; background:var(--border); border-radius:1px; transition:background .35s; }
+    .step-dot.active { background:var(--blue); }
+    .step-label { font-size:.7rem; color:var(--muted); font-family:'Montserrat',sans-serif; letter-spacing:.09em; text-transform:uppercase; margin-bottom:1.6rem; }
+    .service-cards { display:grid; grid-template-columns:1fr 1fr; gap:.55rem; margin-bottom:.2rem; }
+    .svc-btn { background:var(--bg3); border:1px solid var(--border); border-radius:4px; padding:.85rem 1rem; cursor:pointer; text-align:left; transition:border-color .2s, background .2s; width:100%; }
+    .svc-btn:hover { border-color:rgba(58,173,224,.35); }
+    .svc-btn.selected { border-color:var(--blue); background:rgba(58,173,224,.05); }
+    .svc-btn .svc-name { font-family:'Montserrat',sans-serif; font-weight:600; font-size:.84rem; color:var(--text); }
+    .svc-btn .svc-price { color:var(--blue); font-size:.74rem; margin-top:.2rem; }
+    .type-btns, .time-btns { display:flex; gap:.45rem; flex-wrap:wrap; }
+    .type-btn, .time-btn { padding:7px 13px; border:1px solid var(--border); border-radius:4px; background:transparent; color:var(--muted); cursor:pointer; font-size:.81rem; transition:all .2s; font-family:'Inter',sans-serif; }
+    .type-btn:hover, .time-btn:hover { border-color:rgba(58,173,224,.35); color:var(--text); }
+    .type-btn.selected, .time-btn.selected { border-color:var(--blue); color:var(--text); background:rgba(58,173,224,.05); }
+    .type-btn:focus-visible, .time-btn:focus-visible, .svc-btn:focus-visible, .extra-btn:focus-visible {
+      outline: 2px solid var(--blue);
+      outline-offset: 2px;
+    }
+    .field-error { color:#e05555; font-size:.75rem; margin-top:.3rem; display:none; }
+    .field-error.visible { display:block; }
+    #custom-time-input { background:var(--bg3); border:1px solid var(--border); border-radius:4px; color:var(--text); font-family:'Inter',sans-serif; font-size:.85rem; padding:7px 10px; outline:none; transition:border-color .2s; }
+    #custom-time-input:focus { border-color:var(--blue); }
+    .booking-summary { background:var(--bg3); border-left:2px solid var(--blue); padding:.85rem 1.1rem; margin-bottom:1.3rem; font-size:.82rem; color:var(--muted); line-height:1.65; }
+    .booking-summary strong { color:var(--text); display:block; margin-bottom:.25rem; font-size:.88rem; }
+    .step-nav { display:flex; gap:.6rem; margin-top:1.3rem; align-items:center; }
+    .step-nav .fsub { flex:1; margin-top:0; }
+    .btn-back { flex:0 0 auto; background:transparent; border:1px solid var(--border); color:var(--muted); padding:12px 16px; border-radius:4px; cursor:pointer; font-size:.81rem; transition:all .2s; }
+    .btn-back:hover { border-color:rgba(58,173,224,.35); color:var(--text); }
+    .wizard-title { font-family:'Montserrat',sans-serif; font-size:1.15rem; font-weight:700; margin-bottom:1.4rem; }
+    @media (max-width:640px) { .service-cards { grid-template-columns:1fr; } }
+
+    /* ── WhatsApp FAB ── */
+    .wa-fab {
+      position:fixed; bottom:5.5rem; right:2rem; z-index:998;
+      width:48px; height:48px; border-radius:4px;
+      background:#25D366; color:#fff;
+      display:flex; align-items:center; justify-content:center;
+      box-shadow:none; transition:background .2s;
+    }
+    .wa-fab:hover { background:#1ebe5d; }
+    .wa-fab svg { width:22px; height:22px; }
+
+    /* ── Priskalkulator (CSS beholdt for .calc-sublabel brukt i booking) ── */
+    .calc-sublabel { font-size:.72rem; color:var(--muted); margin-bottom:.5rem; }
+
+    /* ── Tillegg-knapper ── */
+    .extras-booking { margin-top:1rem; }
+    .extra-btns { display:flex; flex-wrap:wrap; gap:.4rem; }
+    .extra-btn { padding:6px 12px; border:1px solid var(--border); border-radius:4px;
+                 background:transparent; color:var(--muted); cursor:pointer; font-size:.78rem;
+                 font-family:'Inter',sans-serif; transition:all .15s; display:flex; align-items:center; gap:.35rem; }
+    .extra-btn:hover { border-color:rgba(58,173,224,.35); color:var(--text); }
+    .extra-btn.selected { border-color:var(--blue); background:rgba(58,173,224,.05); color:var(--text); }
+    .extra-btn .ep { color:var(--blue); font-size:.72rem; }
+
+    /* ── Prisvisningsboks i steg 1 ── */
+    .booking-price-box { background:var(--bg3); border:1px solid var(--border);
+                         border-radius:4px; padding:1rem 1.2rem; margin-top:1rem; }
+    #bp-lines { display:grid; grid-template-columns:1fr auto; gap:.15rem .8rem;
+                font-size:.8rem; color:var(--muted); margin-bottom:.5rem; }
+    .bp-total { font-family:'Montserrat',sans-serif; font-weight:800; font-size:1.05rem; }
+    .bp-total span { color:var(--blue); }
+    .bp-note { font-size:.7rem; color:var(--muted); margin-top:.15rem; }
+
+    /* ── Sammendragstabell steg 3 ── */
+    .sum-table { width:100%; border-collapse:collapse; font-size:.82rem; color:var(--muted); margin:.5rem 0; }
+    .sum-table td { padding:.2rem 0; }
+    .sum-table td:last-child { text-align:right; }
+    .sum-total td { color:var(--text); font-weight:700; border-top:1px solid var(--border); padding-top:.4rem; }
+    .sum-meta { font-size:.78rem; color:var(--muted); margin-top:.4rem; }
+  </style>
+</head>
+<body>
+
+<!-- ═══ NAVBAR ═══════════════════════════════ -->
+<nav id="navbar">
+  <a href="#hjem" class="nav-logo"><img src="images/logo.png" alt="Crystal Carwash"/></a>
+  <ul class="nav-links">
+    <li><a href="#slik-fungerer">Slik fungerer det</a></li>
+    <li><a href="#tjenester">Tjenester</a></li>
+    <li><a href="#priser">Priser</a></li>
+    <li><a href="#galleri">Galleri</a></li>
+    <li><a href="#om-oss">Om oss</a></li>
+    <li><a href="#kontakt" class="nav-cta">Bestill nå</a></li>
+  </ul>
+  <button class="hamburger" id="ham" onclick="toggleNav()" aria-label="Åpne meny"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-nav" id="mobileNav">
+  <a href="#slik-fungerer" onclick="toggleNav()">Slik fungerer det</a>
+  <a href="#tjenester" onclick="toggleNav()">Tjenester</a>
+  <a href="#priser" onclick="toggleNav()">Priser</a>
+  <a href="#galleri" onclick="toggleNav()">Galleri</a>
+  <a href="#om-oss" onclick="toggleNav()">Om oss</a>
+  <a href="#kontakt" onclick="toggleNav()" style="color:var(--blue)">Bestill nå →</a>
+</div>
+
+<!-- ═══ HERO ══════════════════════════════════ -->
+<section id="hjem">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-pill"><span></span> Sarpsborg &amp; Østfold &nbsp;·&nbsp; Mobil bilvask</div>
+    <h1 class="hero-title">
+      Vi kommer hjem<br/>
+      <span class="accent">til deg</span>
+    </h1>
+    <p class="hero-sub">
+      Profesjonell bilvask, polering og keramisk coating — vi henter bilen din,
+      gir den en krystallklar behandling, og leverer den tilbake. Du gjør ingenting.
+    </p>
+    <div class="hero-actions">
+      <a href="tel:96969747" class="btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        Ring 96 96 97 47
+      </a>
+      <a href="#priser" class="btn-outline">Se priser →</a>
+    </div>
+  </div>
+  <div class="hero-scroll"><div class="hero-scroll-line"></div>Scroll</div>
+</section>
+
+<!-- ═══ STATS ══════════════════════════════════ -->
+<div class="stats-strip">
+  <div class="stat reveal"><div class="stat-val">100%</div><div class="stat-lbl">Fornøyde kunder</div></div>
+  <div class="stat reveal d1"><div class="stat-val">0 kr</div><div class="stat-lbl">Reisetillegg</div></div>
+  <div class="stat reveal d2"><div class="stat-val">CarPro &amp; Gyeon</div><div class="stat-lbl">Premium produkter</div></div>
+  <div class="stat reveal d3"><div class="stat-val">Østfold + Oslo</div><div class="stat-lbl">Dekningsområde</div></div>
+</div>
+
+<!-- ═══ SLIK FUNGERER DET ══════════════════════ -->
+<section id="slik-fungerer">
+  <div class="sec-head center">
+    <div class="sec-label">Slik fungerer det</div>
+    <h2 class="sec-title">Du gjør <span>ingenting</span> — vi gjør alt</h2>
+    <p class="sec-desc">Tre enkle steg skiller deg fra en krystallklar bil.</p>
+  </div>
+
+  <div class="journey">
+
+    <!-- ── STEG 1 ── -->
+    <div class="journey-step reveal">
+      <div class="journey-visual">
+        <div class="journey-num">01</div>
+        <div class="journey-num-accent">01</div>
+        <!-- ILLUSTRASJON: Person booker på telefon -->
+        <svg class="journey-svg" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Glow bg -->
+          <circle cx="75" cy="75" r="65" fill="rgba(58,173,224,0.04)"/>
+          <!-- Phone body -->
+          <rect x="48" y="12" width="54" height="98" rx="10" fill="rgba(58,173,224,0.07)" stroke="#3AADE0" stroke-width="2"/>
+          <!-- Screen -->
+          <rect x="54" y="22" width="42" height="72" rx="5" fill="rgba(58,173,224,0.05)"/>
+          <!-- Calendar header -->
+          <rect x="58" y="28" width="34" height="10" rx="3" fill="#3AADE0"/>
+          <rect x="60" y="30" width="18" height="6" rx="2" fill="rgba(255,255,255,0.25)"/>
+          <!-- Calendar grid -->
+          <circle cx="64" cy="46" r="2.5" fill="rgba(58,173,224,0.4)"/>
+          <circle cx="75" cy="46" r="2.5" fill="rgba(58,173,224,0.4)"/>
+          <circle cx="86" cy="46" r="2.5" fill="rgba(58,173,224,0.4)"/>
+          <circle cx="64" cy="56" r="2.5" fill="rgba(58,173,224,0.4)"/>
+          <circle cx="75" cy="56" r="3.5" fill="#3AADE0"/>
+          <circle cx="86" cy="56" r="2.5" fill="rgba(58,173,224,0.4)"/>
+          <circle cx="64" cy="66" r="2.5" fill="rgba(58,173,224,0.3)"/>
+          <circle cx="75" cy="66" r="2.5" fill="rgba(58,173,224,0.3)"/>
+          <circle cx="86" cy="66" r="2.5" fill="rgba(58,173,224,0.3)"/>
+          <!-- Checkmark -->
+          <path d="M60 82 L69 91 L90 72" stroke="#3AADE0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- Notch -->
+          <rect x="65" y="14" width="20" height="5" rx="2.5" fill="rgba(58,173,224,0.2)"/>
+          <!-- Home button -->
+          <circle cx="75" cy="104" r="5" stroke="#3AADE0" stroke-width="1.5"/>
+          <!-- Notification dot -->
+          <circle cx="96" cy="22" r="5" fill="#3AADE0"/>
+          <text x="96" y="25.5" font-size="6" text-anchor="middle" fill="white" font-family="sans-serif" font-weight="bold">1</text>
+        </svg>
+      </div>
+      <div class="journey-body">
+        <h3>Book tid på sekunder</h3>
+        <p>Ring oss, send en melding eller fyll ut skjemaet. Vi avtaler tidspunkt og hentested som passer deg — hjemme, på jobb, hvor som helst.</p>
+        <div class="jstep-cta">
+          <a href="tel:96969747" class="btn-primary" style="font-size:.78rem;padding:10px 20px;display:inline-flex;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            Ring nå
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PILEN 1→2 ── -->
+    <div class="journey-connector reveal d1">
+      <svg viewBox="0 0 50 20" fill="none">
+        <line class="j-dash" x1="0" y1="10" x2="38" y2="10" stroke="#3AADE0" stroke-width="2"/>
+        <path d="M33 4 L44 10 L33 16" stroke="#3AADE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>
+    </div>
+
+    <!-- ── STEG 2 ── -->
+    <div class="journey-step reveal d1">
+      <div class="journey-visual">
+        <div class="journey-num">02</div>
+        <div class="journey-num-accent">02</div>
+        <!-- ILLUSTRASJON: Bil hentes fra hus -->
+        <svg class="journey-svg" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="75" cy="75" r="65" fill="rgba(58,173,224,0.04)"/>
+          <!-- Hus (kunde) -->
+          <path d="M15 72 L30 52 L45 72Z" stroke="#3AADE0" stroke-width="1.8" fill="rgba(58,173,224,0.08)" stroke-linejoin="round"/>
+          <rect x="20" y="72" width="20" height="22" rx="1" stroke="#3AADE0" stroke-width="1.5" fill="rgba(58,173,224,0.05)"/>
+          <rect x="26" y="77" width="8" height="12" rx="1" fill="rgba(58,173,224,0.2)"/>
+          <!-- Stripe på veien -->
+          <line x1="48" y1="110" x2="70" y2="110" stroke="#3AADE0" stroke-width="1.5" stroke-dasharray="5 4" opacity=".5"/>
+          <line x1="74" y1="110" x2="96" y2="110" stroke="#3AADE0" stroke-width="1.5" stroke-dasharray="5 4" opacity=".5"/>
+          <!-- Bil kropp -->
+          <rect x="65" y="88" width="74" height="22" rx="5" fill="rgba(58,173,224,0.12)" stroke="#3AADE0" stroke-width="2"/>
+          <!-- Tak -->
+          <path d="M76 88 L84 74 L118 74 L126 88" stroke="#3AADE0" stroke-width="2" fill="rgba(58,173,224,0.08)" stroke-linejoin="round"/>
+          <!-- Vinduer -->
+          <path d="M86 88 L90 76 L108 76 L108 88Z" fill="rgba(58,173,224,0.2)"/>
+          <path d="M110 88 L110 76 L124 76 L126 88Z" fill="rgba(58,173,224,0.15)"/>
+          <!-- Hjul -->
+          <circle cx="83" cy="110" r="9" fill="var(--bg2)" stroke="#3AADE0" stroke-width="2"/>
+          <circle cx="83" cy="110" r="3.5" fill="#3AADE0"/>
+          <circle cx="121" cy="110" r="9" fill="var(--bg2)" stroke="#3AADE0" stroke-width="2"/>
+          <circle cx="121" cy="110" r="3.5" fill="#3AADE0"/>
+          <!-- Frontlys -->
+          <rect x="133" y="92" width="6" height="8" rx="2" fill="#3AADE0"/>
+          <!-- Fartslinjer -->
+          <line x1="60" y1="80" x2="42" y2="80" stroke="#3AADE0" stroke-width="2" stroke-linecap="round" opacity=".6"/>
+          <line x1="60" y1="88" x2="38" y2="88" stroke="#3AADE0" stroke-width="1.5" stroke-linecap="round" opacity=".4"/>
+          <line x1="60" y1="96" x2="46" y2="96" stroke="#3AADE0" stroke-width="1" stroke-linecap="round" opacity=".3"/>
+          <!-- Crystal logo på bil -->
+          <path d="M91 96 L96 90 L101 96 L99 96 L96 93 L93 96Z" fill="rgba(58,173,224,0.5)"/>
+        </svg>
+      </div>
+      <div class="journey-body">
+        <h3>Vi henter bilen din</h3>
+        <p>Vi kjører til deg og henter bilen — enten det er hjemme, på jobb eller der du er. Du trenger ikke å gjøre noe som helst.</p>
+      </div>
+    </div>
+
+    <!-- ── PILEN 2→3 ── -->
+    <div class="journey-connector reveal d2">
+      <svg viewBox="0 0 50 20" fill="none">
+        <line class="j-dash" x1="0" y1="10" x2="38" y2="10" stroke="#3AADE0" stroke-width="2"/>
+        <path d="M33 4 L44 10 L33 16" stroke="#3AADE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>
+    </div>
+
+    <!-- ── STEG 3 ── -->
+    <div class="journey-step reveal d2">
+      <div class="journey-visual">
+        <div class="journey-num">03</div>
+        <div class="journey-num-accent">03</div>
+        <!-- ILLUSTRASJON: Skinnende ren bil levert -->
+        <svg class="journey-svg" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="75" cy="75" r="65" fill="rgba(58,173,224,0.04)"/>
+          <!-- Bil kropp -->
+          <rect x="18" y="86" width="114" height="30" rx="7" fill="rgba(58,173,224,0.13)" stroke="#3AADE0" stroke-width="2.2"/>
+          <!-- Tak -->
+          <path d="M34 86 L46 64 L104 64 L116 86" stroke="#3AADE0" stroke-width="2.2" fill="rgba(58,173,224,0.09)" stroke-linejoin="round"/>
+          <!-- Vinduer -->
+          <path d="M48 86 L54 66 L78 66 L78 86Z" fill="rgba(58,173,224,0.22)"/>
+          <path d="M80 86 L80 66 L100 66 L110 86Z" fill="rgba(58,173,224,0.18)"/>
+          <!-- Hjul -->
+          <circle cx="42" cy="116" r="12" fill="var(--bg2)" stroke="#3AADE0" stroke-width="2.2"/>
+          <circle cx="42" cy="116" r="5" fill="#3AADE0"/>
+          <circle cx="108" cy="116" r="12" fill="var(--bg2)" stroke="#3AADE0" stroke-width="2.2"/>
+          <circle cx="108" cy="116" r="5" fill="#3AADE0"/>
+          <!-- Frontlys -->
+          <rect x="125" y="90" width="7" height="11" rx="2.5" fill="#3AADE0"/>
+          <!-- Refleks på panseret -->
+          <path d="M55 80 Q75 74 95 80" stroke="rgba(255,255,255,0.2)" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <!-- Gnister / sparkles -->
+          <!-- Stor stjerne venstre -->
+          <path d="M22 42 L24.5 32 L27 42 L37 44.5 L27 47 L24.5 57 L22 47 L12 44.5Z" fill="#3AADE0" opacity=".85"/>
+          <!-- Liten stjerne høyre -->
+          <path d="M122 28 L123.5 22 L125 28 L131 29.5 L125 31 L123.5 37 L122 31 L116 29.5Z" fill="#3AADE0" opacity=".7"/>
+          <!-- Mini gnister -->
+          <circle cx="52" cy="26" r="3" fill="#3AADE0" opacity=".6"/>
+          <circle cx="100" cy="35" r="2" fill="#3AADE0" opacity=".5"/>
+          <circle cx="18" cy="68" r="2" fill="#3AADE0" opacity=".4"/>
+          <circle cx="134" cy="60" r="2.5" fill="#3AADE0" opacity=".45"/>
+          <!-- Huk / godkjent sirkel -->
+          <circle cx="128" cy="115" r="14" fill="rgba(58,173,224,0.15)" stroke="#3AADE0" stroke-width="2"/>
+          <path d="M121 115 L126 121 L136 108" stroke="#3AADE0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="journey-body">
+        <h3>Krystallklar bil — levert</h3>
+        <p>Vi leverer bilen tilbake til deg — skinnende ren og behandlet med omhu og de beste produktene. Du trenger ikke å løfte en finger.</p>
+      </div>
+    </div>
+
+  </div><!-- /journey -->
+
+  <!-- ── BANNER ── -->
+  <div class="journey-banner reveal">
+    <div class="jb-inner">
+      <div class="jb-text">
+        <span class="jb-big">Du sitter hjemme.</span>
+        <span class="jb-sep">Vi gjør resten.</span>
+      </div>
+      <a href="#kontakt" class="btn-primary">Bestill nå →</a>
+    </div>
+  </div>
+
+</section>
+
+<!-- ═══ TJENESTER ══════════════════════════════ -->
+<section id="tjenester">
+  <div class="sec-head">
+    <div class="sec-label">Våre tjenester</div>
+    <h2 class="sec-title">Alt bilen din <span>trenger</span></h2>
+    <p class="sec-desc">Fra vanlig vask til full luksusbehandling — vi har pakken for deg.</p>
+  </div>
+  <div class="services-grid">
+    <div class="srv-card reveal">
+      <div class="srv-img">
+        <img src="images/new_steam.jpg" alt="Utvendig og innvendig bilvask" loading="lazy"/>
+      </div>
+      <div class="srv-body">
+        <h3>Utvendig &amp; innvendig vask</h3>
+        <p>Grundig håndvask med skum, felgrens, dekkshine, støvsuging og innvendig rengjøring.</p>
+        <span class="srv-tag">Fra 1 200,-</span>
+      </div>
+    </div>
+    <div class="srv-card reveal d1">
+      <div class="srv-img"><img src="images/new_polering.jpg" alt="Maskinpolering av bil" loading="lazy"/></div>
+      <div class="srv-body">
+        <h3>Maskinpolering</h3>
+        <p>1-, 2- eller 3-stegs maskinpolering. Fjerner riper og virvler — gir bilen tilbake glanser.</p>
+        <span class="srv-tag">Fra 3 500,-</span>
+      </div>
+    </div>
+    <div class="srv-card reveal d2">
+      <div class="srv-img"><img src="images/new_coating.jpg" alt="Keramisk coating" loading="lazy"/></div>
+      <div class="srv-body">
+        <h3>Keramisk coating</h3>
+        <p>Langvarig lakkbeskyttelse med CarPro eller Gyeon coating. 2–5 år holdbarhet.</p>
+        <span class="srv-tag">Fra 8 000,-</span>
+      </div>
+    </div>
+    <div class="srv-card reveal">
+      <div class="srv-img"><img src="images/new_steam_merc.jpg" alt="Steambehandling – Mercedes-AMG interiør" loading="lazy"/></div>
+      <div class="srv-body">
+        <h3>Steambehandling</h3>
+        <p>Damprengjøring som desinfiserer og renser interiøret i dybden. Perfekt mot lukt og bakterier.</p>
+        <span class="srv-tag">Fra 500,-</span>
+      </div>
+    </div>
+    <div class="srv-card reveal d1">
+      <div class="srv-img"><img src="images/new_felg.jpg" alt="Felgbehandling og felg-coating" loading="lazy"/></div>
+      <div class="srv-body">
+        <h3>Felgbehandling</h3>
+        <p>Grundig felgrens, fargebehandling og keramisk felg-coating med Gyeon eller CarPro.</p>
+        <span class="srv-tag">Fra 3 500,-</span>
+      </div>
+    </div>
+    <div class="srv-card reveal d2">
+      <div class="srv-img"><img src="images/new_salg.jpg" alt="Salgsklargjøring av bil" loading="lazy"/></div>
+      <div class="srv-body">
+        <h3>Salgsklargjøring</h3>
+        <p>Den ultimate pakken for salg — steam, polering og full detailing. Bilen ser ut som ny.</p>
+        <span class="srv-tag">Fra 3 500,-</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ GALLERI ════════════════════════════════ -->
+<section id="galleri">
+  <div class="sec-head">
+    <div class="sec-label">Våre jobber</div>
+    <h2 class="sec-title">Resultater som <span>imponerer</span></h2>
+    <p class="sec-desc">Se hva vi gjør for bilene til våre kunder — fra dagligdagse biler til eksklusive sportsbiler.</p>
+  </div>
+
+  <div class="gallery-grid">
+    <div class="g-item"><img src="images/g1.jpg" alt="Lamborghini Huracán · Detailing" loading="lazy"/><div class="g-overlay"><span>Lamborghini Huracán · Detailing</span></div></div>
+    <div class="g-item"><img src="images/g2.jpg" alt="Mercedes-AMG · Polering" loading="lazy"/><div class="g-overlay"><span>Mercedes-AMG · Polering</span></div></div>
+    <div class="g-item"><img src="images/g3.jpg" alt="Audi RS3 · Utvendig vask" loading="lazy"/><div class="g-overlay"><span>Audi RS3 · Utvendig vask</span></div></div>
+    <div class="g-item"><img src="images/g4.jpg" alt="BMW X5 · Detailing" loading="lazy"/><div class="g-overlay"><span>BMW X5 · Detailing</span></div></div>
+    <div class="g-item"><img src="images/g5.jpg" alt="BMW X5 · Motorvask" loading="lazy"/><div class="g-overlay"><span>BMW X5 · Motorvask</span></div></div>
+    <div class="g-item"><img src="images/g6.jpg" alt="Audi A5 · Diamantvask" loading="lazy"/><div class="g-overlay"><span>Audi A5 · Diamantvask</span></div></div>
+  </div>
+
+  <div class="gallery-cta">
+    <p>Følg oss på Instagram for å se alle jobber vi gjør</p>
+    <a href="https://www.instagram.com/crystalcarwash_rana" target="_blank" class="btn-outline">
+      @crystalcarwash_rana →
+    </a>
+  </div>
+</section>
+
+<!-- ═══ ANMELDELSER ══════════════════════════ -->
+<section id="anmeldelser">
+  <div class="sec-head center">
+    <div class="sec-label">Hva kunder sier</div>
+    <h2 class="sec-title">Ekte <span>tilbakemeldinger</span></h2>
+    <p class="sec-desc">Vi er stolte av arbeidet vi gjør — og av kundene våre som anbefaler oss videre.</p>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card reveal">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Fantastisk service fra start til slutt. Nomaer hentet bilen hjemme hos meg og leverte den skinnende ren tilbake. Har aldri hatt en så ren bil. Kommer definitivt tilbake!"</p>
+      <div class="review-author">
+        <div class="review-avatar">T</div>
+        <div>
+          <div class="review-name">Thomas E.</div>
+          <div class="review-service">Diamantvask · Sarpsborg</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card reveal d1">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Bestilte Premium Coating på BMWen min. Resultatet overgikk alle forventninger — lakken er som speil. Profesjonell, punktlig og veldig hyggelig. Sterkt anbefalt!"</p>
+      <div class="review-author">
+        <div class="review-avatar">L</div>
+        <div>
+          <div class="review-name">Line A.</div>
+          <div class="review-service">Keramisk Coating · Fredrikstad</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card reveal d2">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Solgte bilen min etter at Crystal Carwash hadde fikset den med salgsklargjøring. Kjøperen trodde den var nesten ny! Tok bare én dag og resultatet var utrolig."</p>
+      <div class="review-author">
+        <div class="review-avatar">K</div>
+        <div>
+          <div class="review-name">Kristoffer H.</div>
+          <div class="review-service">Salgsklargjøring · Halden</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PRISER ════════════════════════════════ -->
+<section id="priser">
+  <div class="sec-head">
+    <div class="sec-label">Prisliste</div>
+    <h2 class="sec-title">Tydelige <span>priser</span></h2>
+    <p class="sec-desc">Alle priser inkl. MVA og gratis henting/levering innen dekningsområdet.</p>
+  </div>
+
+  <div class="tabs">
+    <button class="tab active" onclick="showTab('vask',this)">Vaskepakker</button>
+    <button class="tab" onclick="showTab('polering',this)">Polering</button>
+    <button class="tab" onclick="showTab('coating',this)">Keramisk Coating</button>
+    <button class="tab" onclick="showTab('felg',this)">Felgbehandling</button>
+    <button class="tab" onclick="showTab('ekstra',this)">Ekstra</button>
+  </div>
+
+  <!-- VASK -->
+  <div class="tab-panel active" id="tab-vask">
+    <div class="price-grid">
+      <div class="p-card reveal">
+        <h3>Diamant Innvendig</h3><div class="p-sub">Kun innvendig</div>
+        <div class="p-price">1 200,- <small>ink. MVA</small></div>
+        <div class="p-note">✓ Gratis henting &amp; levering</div>
+        <div class="p-divider"></div>
+        <ul class="p-features">
+          <li>Støvsuging</li><li>Innvendig dyprengjøring</li><li>Luktfjerning</li>
+          <li>Steambehandling inkl. dørkarmer</li><li>Vask og tørk av dørkarmer</li>
+          <li>Innv. og utv. vindusrengjøring</li><li>Setebehandling (alkantara/skinn/stoff)</li>
+        </ul>
+      </div>
+      <div class="p-card reveal d1">
+        <h3>Premiumvask</h3><div class="p-sub">Innvendig + utvendig</div>
+        <div class="p-price">1 700,- <small>ink. MVA</small></div>
+        <div class="p-note">✓ Gratis henting &amp; levering</div>
+        <div class="p-divider"></div>
+        <ul class="p-features">
+          <li>Avfetting og insektsfjerning</li><li>Utvendig vask med skum og håndvask</li>
+          <li>Dekk og felgrens + dekkshine</li><li>Tørk av bil og dørkarmer</li>
+          <li>Innvendig rengjøring</li><li>Setebehandling (alkantara/skinn/stoff)</li>
+        </ul>
+      </div>
+      <div class="p-card pop reveal d2">
+        <h3>Diamantvask</h3><div class="p-sub">Innvendig + utvendig</div>
+        <div class="p-price">2 600,- <small>ink. MVA</small></div>
+        <div class="p-note">✓ Gratis henting &amp; levering</div>
+        <div class="p-divider"></div>
+        <ul class="p-features">
+          <li>Avfetting og metallpartikkelfjerner</li><li>Insektpartikkelfjerner</li>
+          <li>Utvendig skumvask og håndvask</li><li>Dekk, felgrens og dekkshine</li>
+          <li>Motorvask</li><li>Støvsuging og innvendig dyprengjøring</li>
+          <li>Luktfjerning og steambehandling</li><li>Setebehandling (alkantara/skinn/stoff)</li>
+        </ul>
+      </div>
+      <div class="p-card reveal d3">
+        <h3>Salgsklargjøring</h3><div class="p-sub">Showroom-finish</div>
+        <div class="p-price">3 500,- <small>ink. MVA</small></div>
+        <div class="p-note">✓ Gratis henting &amp; levering</div>
+        <div class="p-divider"></div>
+        <ul class="p-features">
+          <li>Full bilvask og steambehandling</li><li>Full utvendig detailing</li>
+          <li>Motorvask</li><li>Plast- og vindusfornyring</li>
+          <li>Setebehandling (alkantara/skinn/stoff)</li><li>1-stegs maskinpolering</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- POLERING -->
+  <div class="tab-panel" id="tab-polering">
+    <div class="price-grid">
+      <div class="p-card reveal">
+        <h3>Standard Polering</h3><div class="p-sub">1-stegs</div>
+        <div class="p-price">3 500,- <small>ink. MVA</small></div>
+        <div class="p-note">✓ Inkl. henting &amp; levering</div>
+        <div class="p-divider"></div>
+        <ul class="p-features">
+          <li>Premium vask inkl.</li><li>Grundig lakkrengjøring</li>
+          <li>Fjerner lette riper og gir fin glans</li>
+        </ul>
+      </div>
+      <div class="p-card pop reveal d1">
+        <h3>Premium Polering</h3><div class="p-sub">2-stegs</div>
+        <div class="p-price">4 500,- <small>ink. MVA</small></div>
+        <div class="p-note">✓ Inkl. henting &amp; levering</div>
+        <div class="p-divider"></div>
+        <ul class="p-features">
+          <li>Premium mikrovask inkl.</li><li>2-stegs maskinpolering</li>
+          <li>Fjerner dypere riper og virvler</li><li>Høyere glans og renere finish</li>
+        </ul>
+      </div>
+      <div class="p-card reveal d2">
+        <h3>Diamant Polering</h3><div class="p-sub">3-stegs</div>
+        <div class="p-price">6 000,- <small>ink. MVA</small></div>
+        <div class="p-note">✓ Inkl. henting &amp; levering</div>
+        <div class="p-divider"></div>
+        <ul class="p-features">
+          <li>Diamantvask inkl.</li><li>3-stegs maskinpolering</li>
+          <li>Dypeste lakkorreksjon</li><li>Maks glans — klar for coating</li>
+        </ul>
+      </div>
+    </div>
+    <div class="price-note-box reveal"><p><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7DD3F8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:.4rem"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg><strong>Tips:</strong> Kombiner polering med keramisk coating for lengre holdbarhet. Kontakt oss for skreddersydd tilbud basert på bilens størrelse og tilstand.</p></div>
+  </div>
+
+  <!-- KERAMISK COATING -->
+  <div class="tab-panel" id="tab-coating">
+    <div class="price-grid">
+      <div class="p-card reveal">
+        <h3>Standard Coating</h3><div class="p-sub">Gyeon · 2–3 år</div>
+        <div class="p-price">Fra 8 000,- <small>ink. MVA</small></div>
+        <div class="p-note">✓ Inkl. henting &amp; levering</div>
+        <div class="p-divider"></div>
+        <ul class="p-features"><li>GYEON Keramisk Coating</li><li>2–3 års beskyttelse</li><li>Lett vedlikehold</li></ul>
+      </div>
+      <div class="p-card pop reveal d1">
+        <h3>Premium Coating</h3><div class="p-sub">CarPro · 3–4 år</div>
+        <div class="p-price">Fra 10 000,- <small>ink. MVA</small></div>
+        <div class="p-note">✓ Inkl. henting &amp; levering</div>
+        <div class="p-divider"></div>
+        <ul class="p-features"><li>CARPRO Keramisk Coating</li><li>3–4 års beskyttelse</li><li>Høy kjemisk motstand</li><li>Ekstremt glansfullt</li></ul>
+      </div>
+      <div class="p-card reveal d2">
+        <h3>Diamant Coating</h3><div class="p-sub">XPEL Fusion Plus · 4–5 år</div>
+        <div class="p-price">Fra 15 000,- <small>ink. MVA</small></div>
+        <div class="p-note">✓ Inkl. henting &amp; levering</div>
+        <div class="p-divider"></div>
+        <ul class="p-features"><li>XPEL Fusion Plus</li><li>4–5 år holdbarhet</li><li>Inkl. polering</li><li>For eksklusive biler</li></ul>
+      </div>
+    </div>
+    <div class="price-note-box reveal"><p><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7DD3F8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:.4rem"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg><strong>Viktig:</strong> Prisen justeres etter bilens størrelse og tilstand. Ekstra polering inkluderes i Premium og Diamant. Ring for gratis vurdering.</p></div>
+  </div>
+
+  <!-- FELGBEHANDLING -->
+  <div class="tab-panel" id="tab-felg">
+    <div class="price-grid">
+      <div class="p-card reveal">
+        <h3>Premium Felgbehandling</h3><div class="p-sub">Gyeon · 2-stegs polering</div>
+        <div class="p-price">Fra 3 500,- <small>ink. MVA</small></div>
+        <div class="p-note">✓ Inkl. henting &amp; levering</div>
+        <div class="p-divider"></div>
+        <ul class="p-features">
+          <li>Gyeon Felg Coating + 2-stegs polering</li>
+          <li>Grundig felgrens og forvask</li>
+          <li>Ny fargebehandling av felgoverflate</li>
+          <li>Keramisk coating-påføring</li>
+        </ul>
+      </div>
+      <div class="p-card pop reveal d1">
+        <h3>Diamant Felgbehandling</h3><div class="p-sub">CarPro · 3-stegs polering</div>
+        <div class="p-price">Fra 5 000,- <small>ink. MVA</small></div>
+        <div class="p-note">✓ Inkl. henting &amp; levering</div>
+        <div class="p-divider"></div>
+        <ul class="p-features">
+          <li>CarPro Felg Coating + 3-stegs polering</li>
+          <li>DYP korreksjon — best mulig finish</li>
+          <li>Grundig felgrens og forvask</li>
+          <li>Profesjonell keramisk coating</li>
+          <li>CARPRO DLUX Wheels Coating</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- EKSTRA -->
+  <div class="tab-panel" id="tab-ekstra">
+    <div class="extras">
+      <div class="extra"><span class="extra-nm">Kjemikalier</span><span class="extra-pr">250,-</span></div>
+      <div class="extra"><span class="extra-nm">Motorvask</span><span class="extra-pr">300,-</span></div>
+      <div class="extra"><span class="extra-nm">Glasspolish</span><span class="extra-pr">600,-</span></div>
+      <div class="extra"><span class="extra-nm">Voksing</span><span class="extra-pr">500,-</span></div>
+      <div class="extra"><span class="extra-nm">Dekkskift</span><span class="extra-pr">Fra 800,-</span></div>
+      <div class="extra"><span class="extra-nm">Steambehandling (4 vind. + tak)</span><span class="extra-pr">Fra 500,-</span></div>
+      <div class="extra"><span class="extra-nm">Glassforseggling</span><span class="extra-pr">Fra 2 000,-</span></div>
+      <div class="extra"><span class="extra-nm">Fjerning av dyrehår</span><span class="extra-pr">Fra 300,-</span></div>
+      <div class="extra"><span class="extra-nm">Seterner (stoff)</span><span class="extra-pr">Fra 500,-</span></div>
+      <div class="extra"><span class="extra-nm">Luktfjerning</span><span class="extra-pr">Fra 500,-</span></div>
+      <div class="extra"><span class="extra-nm">Bobil / storbil / minibuss</span><span class="extra-pr">Fra 2 000,-</span></div>
+      <div class="extra"><span class="extra-nm">Logo- / foliefjerning</span><span class="extra-pr">Fra 1 000,-</span></div>
+      <div class="extra"><span class="extra-nm">Lykte polering</span><span class="extra-pr">Fra 1 000,-</span></div>
+      <div class="extra"><span class="extra-nm">Glass rosseling</span><span class="extra-pr">Fra 2 000,-</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ INSTAGRAM ════════════════════════════ -->
+<section id="instagram">
+  <div class="sec-head center">
+    <div class="sec-label">@crystalcarwash_rana</div>
+    <h2 class="sec-title">Følg oss på <span>Instagram</span></h2>
+    <p class="sec-desc">Se de nyeste jobbene vi gjør — fra dagligdagse biler til eksklusive sportsbiler.</p>
+  </div>
+  <div class="ig-grid">
+    <div class="ig-item">
+      <img src="images/audi_a5.jpg" alt="Crystal Carwash Instagram – Audi A5" loading="lazy"/>
+      <div class="ig-ov">
+        <svg width="28" height="28" fill="white" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07..."/></svg>
+      </div>
+    </div>
+    <div class="ig-item">
+      <img src="images/car_lambo_rear.jpg" alt="Crystal Carwash Instagram – Lamborghini bak" loading="lazy"/>
+      <div class="ig-ov"><svg width="28" height="28" fill="white" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></div>
+    </div>
+    <div class="ig-item">
+      <img src="images/car_bmw_x5_workshop.jpg" alt="Crystal Carwash Instagram – BMW X5 workshop" loading="lazy"/>
+      <div class="ig-ov"><svg width="28" height="28" fill="white" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></div>
+    </div>
+    <div class="ig-item">
+      <img src="images/car_mg_black.jpg" alt="Crystal Carwash Instagram – MG sort" loading="lazy"/>
+      <div class="ig-ov"><svg width="28" height="28" fill="white" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></div>
+    </div>
+    <div class="ig-item">
+      <img src="images/car_rangerover.jpg" alt="Crystal Carwash Instagram – Range Rover" loading="lazy"/>
+      <div class="ig-ov"><svg width="28" height="28" fill="white" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></div>
+    </div>
+  </div>
+  <div class="ig-follow">
+    <a href="https://www.instagram.com/crystalcarwash_rana" target="_blank">
+      <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      Følg @crystalcarwash_rana
+    </a>
+  </div>
+</section>
+
+<!-- ═══ OM OSS ════════════════════════════════ -->
+<section id="om-oss">
+  <div class="about-wrap">
+    <div class="about-img-col reveal">
+      <img src="images/audi_a5.jpg" alt="Crystal Carwash – Audi A5" loading="lazy"/>
+      <div class="about-badge">
+        <div class="big">⭐ 5/5</div>
+        <div class="sm">Kundevurderinger</div>
+      </div>
+    </div>
+    <div class="about-text reveal d1">
+      <div class="sec-label">Om Crystal Carwash</div>
+      <h2 class="sec-title">Lidenskapen for <span>biler</span></h2>
+      <p>
+        Crystal Carwash ble startet av <strong>Nomaer Rana</strong> med én klar visjon: å tilby en
+        bilpleietjeneste ingen andre i Norge tilbyr på samme måte. Konseptet er enkelt — vi kommer til deg.
+      </p>
+      <p>
+        Som en ung gründer fra Sarpsborg med en genuin lidenskap for sportsbiler og luksuskjøretøy,
+        bygger Nomaer Crystal Carwash på ekte fagkunnskap, premium produkter og dedikasjon til
+        hvert eneste kjøretøy.
+      </p>
+      <p>
+        Vi bruker utelukkende produkter fra <strong>CarPro</strong> og <strong>Gyeon</strong> —
+        de samme merkevarene proffe detailere bruker over hele Europa — og vi dekker hele
+        <strong>Østfold</strong> og <strong>Oslo-området</strong>.
+      </p>
+      <div class="chips">
+        <span class="chip">Mobil henting &amp; levering</span>
+        <span class="chip">CarPro &amp; Gyeon produkter</span>
+        <span class="chip">Keramisk coating-spesialist</span>
+        <span class="chip">Sportsbil-entusiast</span>
+        <span class="chip">Sarpsborg &amp; Østfold</span>
+      </div>
+      <a href="#kontakt" class="btn-primary" style="margin-top:2rem; display:inline-flex;">Ta kontakt →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ AREA BANNER ══════════════════════════ -->
+<div class="area-banner">
+  <h2>Vi kjører til deg i hele Østfold og Oslo-området</h2>
+  <p>Gratis henting og levering — ingen reisetillegg innen dekningsområdet</p>
+  <div class="area-tags">
+    <span class="area-tag">Sarpsborg</span>
+    <span class="area-tag">Fredrikstad</span>
+    <span class="area-tag">Halden</span>
+    <span class="area-tag">Moss</span>
+    <span class="area-tag">Østfold</span>
+    <span class="area-tag">Oslo</span>
+    <span class="area-tag">Akershus</span>
+  </div>
+</div>
+
+<!-- ═══ FAQ ══════════════════════════════════ -->
+<section id="faq">
+  <div class="sec-head center">
+    <div class="sec-label">Vanlige spørsmål</div>
+    <h2 class="sec-title">Alt du <span>lurer på</span></h2>
+    <p class="sec-desc">Her er svarene på det kundene spør om oftest.</p>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item reveal">
+      <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+        <span>Hvor lang tid tar en bilvask?</span>
+        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="faq-a">
+        <p>Det varierer etter tjeneste. En vanlig vask tar <strong>2–4 timer</strong>, maskinpolering tar <strong>1–2 dager</strong>, og keramisk coating tar <strong>2–3 dager</strong> avhengig av pakke. Vi gir alltid et estimat ved bestilling.</p>
+      </div>
+    </div>
+    <div class="faq-item reveal d1">
+      <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+        <span>Trenger jeg å være hjemme når dere henter bilen?</span>
+        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="faq-a">
+        <p>Nei! Du trenger ikke å være tilstede. Mange kunder bruker nøkkelboks eller legger nøkkelen et avtalt sted. Vi koordinerer dette med deg på forhånd så det er så smidig som mulig.</p>
+      </div>
+    </div>
+    <div class="faq-item reveal d2">
+      <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+        <span>Hva er dekningsområdet?</span>
+        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="faq-a">
+        <p>Vi dekker <strong>hele Østfold</strong> (Sarpsborg, Fredrikstad, Halden, Moss m.fl.) og <strong>Oslo-området</strong>. Henting og levering er alltid gratis innen dette området — ingen reisetillegg.</p>
+      </div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+        <span>Hvilke produkter bruker dere?</span>
+        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="faq-a">
+        <p>Vi bruker utelukkende profesjonelle produkter fra <strong>CarPro</strong> og <strong>Gyeon</strong> — de samme merkevarene proffe detailere bruker over hele Europa. Ingen billigprodukter — bare det beste for bilen din.</p>
+      </div>
+    </div>
+    <div class="faq-item reveal d1">
+      <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+        <span>Er det mulig å bestille til i dag?</span>
+        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="faq-a">
+        <p>Vi prøver alltid å imøtekomme korte frister! <a href="tel:96969747" style="color:var(--blue)">Ring oss</a> så ser vi hva som er ledig. Vaskepakker kan ofte ordnes samme dag, mens polering og coating krever litt mer planlegging.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ KONTAKT ══════════════════════════════ -->
+<section id="kontakt">
+  <div class="sec-head">
+    <div class="sec-label">Kontakt oss</div>
+    <h2 class="sec-title">Bestill <span>bilvask</span></h2>
+    <p class="sec-desc">Vi henter bilen din — alt du trenger å gjøre er å ta kontakt.</p>
+  </div>
+  <div class="contact-wrap">
+    <div class="cinfo">
+      <div class="ci reveal">
+        <div class="ci-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3AADE0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.92 11.5a19.79 19.79 0 01-3.07-8.67A2 2 0 012.83 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.78a16 16 0 006.29 6.29l1.14-1.14a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        </div>
+        <div><div class="ci-lbl">Telefon</div><div class="ci-val"><a href="tel:96969747">96 96 97 47</a></div></div>
+      </div>
+      <div class="ci reveal d1">
+        <div class="ci-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3AADE0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <div><div class="ci-lbl">E-post</div><div class="ci-val"><a href="mailto:crystalcarwash_rana@hotmail.com">crystalcarwash_rana@hotmail.com</a></div></div>
+      </div>
+      <div class="ci reveal d2">
+        <div class="ci-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3AADE0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div><div class="ci-lbl">Dekningsområde</div><div class="ci-val">Sarpsborg, Fredrikstad, Halden,<br/>hele Østfold og Oslo-området</div></div>
+      </div>
+      <div class="ci reveal d3">
+        <div class="ci-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3AADE0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+        </div>
+        <div><div class="ci-lbl">Tilgjengelighet</div><div class="ci-val">Mandag – Søndag<br/>Avtal tid via telefon eller melding</div></div>
+      </div>
+      <div class="ci reveal">
+        <div class="ci-icon" style="background:linear-gradient(135deg,rgba(193,53,132,0.15),rgba(88,81,219,0.15)); border-color:rgba(193,53,132,0.3);">
+          <!-- Instagram ikon -->
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="#C13584"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </div>
+        <div>
+          <div class="ci-lbl">Instagram</div>
+          <div class="ci-val"><a href="https://www.instagram.com/crystalcarwash_rana" target="_blank">@crystalcarwash_rana</a></div>
+        </div>
+      </div>
+      <div class="ci reveal d1">
+        <div class="ci-icon" style="background:rgba(24,119,242,0.12); border-color:rgba(24,119,242,0.3);">
+          <!-- Facebook ikon -->
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </div>
+        <div>
+          <div class="ci-lbl">Facebook</div>
+          <div class="ci-val"><a href="https://www.facebook.com/people/CrystalCarwash/61561924269605/" target="_blank">Crystal Carwash</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cform reveal d1">
+
+      <!-- Progress -->
+      <div class="step-indicator">
+        <div class="step-dot active" id="dot-1"></div>
+        <div class="step-dot" id="dot-2"></div>
+        <div class="step-dot" id="dot-3"></div>
+      </div>
+      <div class="step-label" id="step-label">Steg 1 av 3 — Velg tjeneste</div>
+
+      <form id="cf" action="https://formspree.io/f/mgolqbwr" method="POST" onsubmit="sendForm(event)">
+
+        <!-- ── STEG 1: Velg tjeneste ── -->
+        <div class="step" id="step-1">
+          <div class="fg" style="margin-bottom:.8rem">
+            <label>Bilstørrelse</label>
+            <div class="type-btns" id="car-btns">
+              <button type="button" class="type-btn selected" onclick="selectSize(this,'s','Liten bil')">Liten bil</button>
+              <button type="button" class="type-btn" onclick="selectSize(this,'m','Medium')">Medium</button>
+              <button type="button" class="type-btn" onclick="selectSize(this,'l','SUV')">SUV</button>
+              <button type="button" class="type-btn" onclick="selectSize(this,'xl','Storbil')">Storbil</button>
+            </div>
+            <input type="hidden" name="biltype" id="f-biltype"/>
+          </div>
+          <div class="service-cards">
+            <button type="button" class="svc-btn" onclick="toggleService(this,'Utvendig &amp; innvendig vask')">
+              <div class="svc-name">Utvendig &amp; innvendig vask</div><div class="svc-price">1 200,-</div>
+            </button>
+            <button type="button" class="svc-btn" onclick="toggleService(this,'Premiumvask')">
+              <div class="svc-name">Premiumvask</div><div class="svc-price">1 700,-</div>
+            </button>
+            <button type="button" class="svc-btn" onclick="toggleService(this,'Diamantvask')">
+              <div class="svc-name">Diamantvask</div><div class="svc-price">2 600,-</div>
+            </button>
+            <button type="button" class="svc-btn" onclick="toggleService(this,'Maskinpolering')">
+              <div class="svc-name">Maskinpolering</div><div class="svc-price">3 500,-</div>
+            </button>
+            <button type="button" class="svc-btn" onclick="toggleService(this,'Keramisk Coating')">
+              <div class="svc-name">Keramisk Coating</div><div class="svc-price">8 000,-</div>
+            </button>
+            <button type="button" class="svc-btn" onclick="toggleService(this,'Felgbehandling')">
+              <div class="svc-name">Felgbehandling</div><div class="svc-price">3 500,-</div>
+            </button>
+            <button type="button" class="svc-btn" onclick="toggleService(this,'Steambehandling')">
+              <div class="svc-name">Steambehandling</div><div class="svc-price">500,-</div>
+            </button>
+            <button type="button" class="svc-btn" onclick="toggleService(this,'Salgsklargjøring')">
+              <div class="svc-name">Salgsklargjøring</div><div class="svc-price">3 500,-</div>
+            </button>
+          </div>
+
+          <div class="extras-booking">
+            <div class="calc-sublabel">Tillegg (valgfritt)</div>
+            <div class="extra-btns">
+              <button type="button" class="extra-btn" onclick="toggleExtra(this,'Kjemikalier')">Kjemikalier <span class="ep">250,-</span></button>
+              <button type="button" class="extra-btn" onclick="toggleExtra(this,'Motorvask')">Motorvask <span class="ep">300,-</span></button>
+              <button type="button" class="extra-btn" onclick="toggleExtra(this,'Glasspolish')">Glasspolish <span class="ep">600,-</span></button>
+              <button type="button" class="extra-btn" onclick="toggleExtra(this,'Voksing')">Voksing <span class="ep">500,-</span></button>
+              <button type="button" class="extra-btn" onclick="toggleExtra(this,'Dekkskift')">Dekkskift <span class="ep">800,-</span></button>
+              <button type="button" class="extra-btn" onclick="toggleExtra(this,'Steambehandling (4 vind.)')">Steambehandling (4 vind.) <span class="ep">500,-</span></button>
+              <button type="button" class="extra-btn" onclick="toggleExtra(this,'Glassforseggling')">Glassforseggling <span class="ep">2 000,-</span></button>
+              <button type="button" class="extra-btn" onclick="toggleExtra(this,'Fjerning av dyrehår')">Fjerning av dyrehår <span class="ep">300,-</span></button>
+              <button type="button" class="extra-btn" onclick="toggleExtra(this,'Seterner (stoff)')">Seter­ner (stoff) <span class="ep">500,-</span></button>
+              <button type="button" class="extra-btn" onclick="toggleExtra(this,'Luktfjerning')">Luktfjerning <span class="ep">500,-</span></button>
+              <button type="button" class="extra-btn" onclick="toggleExtra(this,'Logo-/foliefjerning')">Logo-/foliefjerning <span class="ep">1 000,-</span></button>
+              <button type="button" class="extra-btn" onclick="toggleExtra(this,'Lyktepolering')">Lyktepolering <span class="ep">1 000,-</span></button>
+            </div>
+          </div>
+
+          <div class="booking-price-box" id="booking-price-box" style="display:none">
+            <div id="bp-lines"></div>
+            <div class="bp-total">Estimert sum: <span id="bp-total"></span></div>
+            <div class="bp-note">Endelig pris avtales ved bestilling</div>
+          </div>
+
+          <input type="hidden" name="tjeneste" id="f-tjeneste"/>
+          <div class="step-nav">
+            <button type="button" class="fsub" id="btn-step1" onclick="goStep(2)" disabled style="opacity:.35;cursor:not-allowed">Neste →</button>
+          </div>
+        </div>
+
+        <!-- ── STEG 2: Bil & tidspunkt ── -->
+        <div class="step" id="step-2" style="display:none">
+          <div class="fg">
+            <label>Hentested / adresse <span style="color:var(--blue)">*</span></label>
+            <input type="text" id="f-adresse" name="adresse" placeholder="Gateveien 12, Sarpsborg" autocomplete="street-address"/>
+            <span class="field-error" id="err-adresse">Vennligst fyll inn adresse.</span>
+          </div>
+          <div class="fg">
+            <label>Foretrukket dato <span style="color:var(--muted);font-size:.73rem">(valgfritt)</span></label>
+            <input type="date" name="dato" id="f-dato"/>
+          </div>
+          <div class="fg">
+            <label>Foretrukket tidspunkt</label>
+            <div class="time-btns" id="time-btns">
+              <button type="button" class="time-btn" onclick="selectTime(this,'Morgen (08–10)')">Morgen</button>
+              <button type="button" class="time-btn" onclick="selectTime(this,'Formiddag (10–13)')">Formiddag</button>
+              <button type="button" class="time-btn" onclick="selectTime(this,'Ettermiddag (13–18)')">Ettermiddag</button>
+              <button type="button" class="time-btn selected" onclick="selectTime(this,'Fleksibel')">Fleksibel</button>
+              <button type="button" class="time-btn" id="btn-custom-time" onclick="selectTime(this,'custom')">Velg klokkeslett</button>
+            </div>
+            <div id="custom-time-wrap" style="display:none; margin-top:.6rem;">
+              <input type="time" id="custom-time-input" oninput="applyCustomTime(this.value)"/>
+            </div>
+            <span class="field-error" id="err-tid">Vennligst velg et klokkeslett.</span>
+            <input type="hidden" name="tidspunkt" id="f-tidspunkt" value="Fleksibel"/>
+          </div>
+          <div class="fg">
+            <label>Tilleggsinfo <span style="color:var(--muted);font-size:.73rem">(valgfritt)</span></label>
+            <textarea name="melding" placeholder="Spesielle ønsker, tilstand på bilen, o.l." style="min-height:70px"></textarea>
+          </div>
+          <div class="step-nav">
+            <button type="button" class="btn-back" onclick="goStep(1)">← Tilbake</button>
+            <button type="button" class="fsub" onclick="goStep(3)">Neste →</button>
+          </div>
+        </div>
+
+        <!-- ── STEG 3: Kontaktinfo ── -->
+        <div class="step" id="step-3" style="display:none">
+          <div class="booking-summary" id="booking-summary"></div>
+          <div class="frow">
+            <div class="fg"><label>Fornavn <span style="color:var(--blue)">*</span></label><input type="text" name="fornavn" placeholder="Ole" required/></div>
+            <div class="fg"><label>Etternavn</label><input type="text" name="etternavn" placeholder="Hansen"/></div>
+          </div>
+          <div class="fg"><label>Telefon <span style="color:var(--blue)">*</span></label><input type="tel" name="telefon" placeholder="900 00 000" required/></div>
+          <div class="fg"><label>E-post <span style="color:var(--muted);font-size:.73rem">(valgfritt)</span></label><input type="email" name="epost" placeholder="din@epost.no"/></div>
+          <div class="step-nav">
+            <button type="button" class="btn-back" onclick="goStep(2)">← Tilbake</button>
+            <button type="submit" class="fsub" id="submit-btn">Send bestilling →</button>
+          </div>
+          <div class="f-ok" id="fok" role="status" aria-live="polite">✅ Takk! Vi tar kontakt snart for å bekrefte timen.</div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══════════════════════════════ -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="f-logo"><img src="images/logo.png" alt="Crystal Carwash" loading="lazy"/></div>
+      <p class="f-about">Profesjonell mobil bilvask og bilpleie i Sarpsborg og Østfold. Vi henter og leverer bilen din — du gjør ingenting.</p>
+    </div>
+    <div class="f-col">
+      <h4>Navigasjon</h4>
+      <div class="f-links">
+        <a href="#slik-fungerer">Slik fungerer det</a>
+        <a href="#tjenester">Tjenester</a>
+        <a href="#priser">Priser</a>
+        <a href="#galleri">Galleri</a>
+        <a href="#om-oss">Om oss</a>
+        <a href="#kontakt">Kontakt</a>
+      </div>
+    </div>
+    <div class="f-col">
+      <h4>Kontakt</h4>
+      <div class="f-links">
+        <a href="tel:96969747" style="display:flex;align-items:center;gap:.5rem;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.92 11.5a19.79 19.79 0 01-3.07-8.67A2 2 0 012.83 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.78a16 16 0 006.29 6.29l1.14-1.14a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> 96 96 97 47</a>
+        <a href="mailto:crystalcarwash_rana@hotmail.com" style="display:flex;align-items:center;gap:.5rem;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> E-post</a>
+        <a href="https://www.instagram.com/crystalcarwash_rana" target="_blank" style="display:flex;align-items:center;gap:.5rem;"><svg width="14" height="14" viewBox="0 0 24 24" fill="#C13584"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg> Instagram</a>
+        <a href="https://www.facebook.com/people/CrystalCarwash/61561924269605/" target="_blank" style="display:flex;align-items:center;gap:.5rem;"><svg width="14" height="14" viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg> Facebook</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bot">
+    <p>© 2025 Crystal Carwash · Sarpsborg</p>
+    <p>Laget med ❤️ for <a href="#hjem">biler</a></p>
+  </div>
+</footer>
+
+<!-- ═══ WHATSAPP FAB ════════════════════════ -->
+<a href="https://wa.me/4796969747" target="_blank" class="wa-fab" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.845L0 24l6.335-1.508A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.848 0-3.584-.493-5.083-1.355l-.363-.214-3.762.896.952-3.67-.236-.377A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+  </svg>
+</a>
+
+<!-- ═══ FLOATING RING BUTTON ════════════════ -->
+<a href="tel:96969747" class="phone-fab">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+  <span class="fab-label">Ring 96 96 97 47</span>
+</a>
+
+<script>
+  // Navbar scroll
+  window.addEventListener('scroll', () => {
+    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // Mobile nav
+  function toggleNav() {
+    document.getElementById('mobileNav').classList.toggle('open');
+  }
+  document.addEventListener('click', e => {
+    const nav = document.getElementById('mobileNav');
+    const ham = document.getElementById('ham');
+    if (nav.classList.contains('open') && !nav.contains(e.target) && !ham.contains(e.target)) {
+      nav.classList.remove('open');
+    }
+  });
+
+  // Tabs
+  function showTab(id, btn) {
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.getElementById('tab-' + id).classList.add('active');
+    btn.classList.add('active');
+  }
+
+  // Scroll reveal
+  const ro = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+
+  // ── Booking Wizard ──────────────────────────────
+  let bState = {
+    services: {},
+    extras:   {},
+    size:     's',
+    carLabel: '',
+    time:     'Fleksibel'
+  };
+
+  const svcMeta = {
+    'Utvendig & innvendig vask': {key:'innv'},
+    'Premiumvask':               {key:'prem'},
+    'Diamantvask':               {key:'diam'},
+    'Maskinpolering':            {key:'pol'},
+    'Keramisk Coating':          {key:'coat'},
+    'Felgbehandling':            {key:'felg'},
+    'Steambehandling':           {fixed:500},
+    'Salgsklargjøring':          {fixed:3500}
+  };
+
+  const extraPrices = {
+    'Kjemikalier':250,'Motorvask':300,'Glasspolish':600,'Voksing':500,
+    'Dekkskift':800,'Steambehandling (4 vind.)':500,'Glassforseggling':2000,
+    'Fjerning av dyrehår':300,'Seterner (stoff)':500,'Luktfjerning':500,
+    'Logo-/foliefjerning':1000,'Lyktepolering':1000
+  };
+
+  function toggleService(btn, name) {
+    btn.classList.toggle('selected');
+    if (btn.classList.contains('selected')) {
+      bState.services[name] = svcMeta[name] || {};
+    } else {
+      delete bState.services[name];
+    }
+    const hasAny = Object.keys(bState.services).length > 0;
+    const nb = document.getElementById('btn-step1');
+    nb.disabled = !hasAny;
+    nb.style.opacity = hasAny ? '1' : '.35';
+    nb.style.cursor = hasAny ? 'pointer' : 'not-allowed';
+    updateBookingPrice();
+  }
+
+  function toggleExtra(btn, name) {
+    btn.classList.toggle('selected');
+    if (btn.classList.contains('selected')) {
+      bState.extras[name] = extraPrices[name] || 0;
+    } else {
+      delete bState.extras[name];
+    }
+    updateBookingPrice();
+  }
+
+  function selectSize(btn, sizeKey, label) {
+    document.querySelectorAll('#car-btns .type-btn').forEach(b => b.classList.remove('selected'));
+    btn.classList.add('selected');
+    bState.size = sizeKey;
+    bState.carLabel = label;
+    document.getElementById('f-biltype').value = label;
+    // Oppdater prisen på hvert servicekort
+    document.querySelectorAll('.svc-btn').forEach(sBtn => {
+      const name = sBtn.querySelector('.svc-name').textContent;
+      const meta = svcMeta[name];
+      if (!meta) return;
+      const priceEl = sBtn.querySelector('.svc-price');
+      if (meta.fixed !== undefined) {
+        priceEl.textContent = meta.fixed.toLocaleString('no-NO') + ',-';
+      } else {
+        priceEl.textContent = calcPrices[meta.key][sizeKey].toLocaleString('no-NO') + ',-';
+      }
+    });
+    updateBookingPrice();
+  }
+
+  function updateBookingPrice() {
+    const box = document.getElementById('booking-price-box');
+    const lines = document.getElementById('bp-lines');
+    const totalEl = document.getElementById('bp-total');
+
+    const svcKeys = Object.keys(bState.services);
+    const extKeys = Object.keys(bState.extras);
+
+    if (svcKeys.length === 0 && extKeys.length === 0) {
+      box.style.display = 'none';
+      return;
+    }
+
+    box.style.display = '';
+    let html = '';
+    let total = 0;
+
+    for (const name of svcKeys) {
+      const meta = bState.services[name];
+      let price;
+      if (meta.fixed !== undefined) {
+        price = meta.fixed;
+      } else {
+        price = calcPrices[meta.key][bState.size];
+      }
+      total += price;
+      html += '<span>' + name + '</span><span>' + price.toLocaleString('no-NO') + ',-</span>';
+    }
+    for (const name of extKeys) {
+      const price = bState.extras[name];
+      total += price;
+      html += '<span>' + name + '</span><span>' + price.toLocaleString('no-NO') + ',-</span>';
+    }
+
+    lines.innerHTML = html;
+    totalEl.textContent = total.toLocaleString('no-NO') + ',-';
+  }
+
+  function selectTime(btn, label) {
+    document.querySelectorAll('#time-btns .time-btn').forEach(b => b.classList.remove('selected'));
+    btn.classList.add('selected');
+    const wrap = document.getElementById('custom-time-wrap');
+    if (label === 'custom') {
+      wrap.style.display = '';
+      const existing = document.getElementById('custom-time-input').value;
+      if (existing) applyCustomTime(existing);
+      else { bState.time = ''; document.getElementById('f-tidspunkt').value = ''; }
+    } else {
+      wrap.style.display = 'none';
+      bState.time = label;
+      document.getElementById('f-tidspunkt').value = label;
+    }
+  }
+
+  function applyCustomTime(val) {
+    if (!val) return;
+    bState.time = 'Kl. ' + val;
+    document.getElementById('f-tidspunkt').value = 'Kl. ' + val;
+  }
+
+  function goStep(n) {
+    if (n === 3) {
+      const addr = document.getElementById('f-adresse');
+      const errAddr = document.getElementById('err-adresse');
+      if (!addr.value.trim()) {
+        addr.focus();
+        errAddr.classList.add('visible');
+        return;
+      } else {
+        errAddr.classList.remove('visible');
+      }
+
+      // Valider klokkeslett hvis "Velg klokkeslett" er valgt uten at tid er satt
+      const tidspunkt = document.getElementById('f-tidspunkt').value;
+      if (!tidspunkt || tidspunkt === 'custom') {
+        document.getElementById('err-tid').classList.add('visible');
+        document.getElementById('custom-time-input').focus();
+        return;
+      } else {
+        document.getElementById('err-tid').classList.remove('visible');
+      }
+      const date = document.getElementById('f-dato').value;
+
+      // Build services list for hidden field
+      const svcNames = Object.keys(bState.services);
+      const extNames = Object.keys(bState.extras);
+      document.getElementById('f-tjeneste').value = [...svcNames, ...extNames.map(n => n + ' (tillegg)')].join(', ');
+
+      // Build detailed summary table
+      let tableRows = '';
+      let total = 0;
+      for (const name of svcNames) {
+        const meta = bState.services[name];
+        let price = meta.fixed !== undefined ? meta.fixed : calcPrices[meta.key][bState.size];
+        total += price;
+        tableRows += '<tr><td>' + name + '</td><td>' + price.toLocaleString('no-NO') + ',-</td></tr>';
+      }
+      for (const name of extNames) {
+        const price = bState.extras[name];
+        total += price;
+        tableRows += '<tr><td>' + name + '</td><td>' + price.toLocaleString('no-NO') + ',-</td></tr>';
+      }
+      const sizeLabel = bState.carLabel ? bState.carLabel : '';
+      const metaLine = [sizeLabel, addr.value, date, bState.time].filter(Boolean).join(' · ');
+
+      document.getElementById('booking-summary').innerHTML =
+        '<table class="sum-table"><tbody>' + tableRows +
+        '</tbody><tfoot><tr class="sum-total"><td>Estimert sum</td><td>' + total.toLocaleString('no-NO') + ',-</td></tr></tfoot></table>' +
+        '<div class="sum-meta">' + metaLine + '</div>';
+    }
+    document.querySelectorAll('.step').forEach(s => s.style.display = 'none');
+    document.getElementById('step-' + n).style.display = '';
+    for (let i = 1; i <= 3; i++) {
+      document.getElementById('dot-' + i).classList.toggle('active', i <= n);
+    }
+    const labels = ['','Steg 1 av 3 — Velg tjeneste','Steg 2 av 3 — Din bil & tidspunkt','Steg 3 av 3 — Kontaktinfo'];
+    document.getElementById('step-label').textContent = labels[n];
+    document.querySelector('.cform').scrollIntoView({ behavior:'smooth', block:'nearest' });
+  }
+
+  // Form – sender til Formspree
+  async function sendForm(e) {
+    e.preventDefault();
+    const form = document.getElementById('cf');
+    const ok = document.getElementById('fok');
+    const btn = document.getElementById('submit-btn');
+
+    btn.disabled = true;
+    btn.textContent = 'Sender…';
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        ok.textContent = '✅ Takk! Vi tar kontakt snart for å bekrefte timen.';
+        ok.style.display = 'block';
+        form.reset();
+        document.querySelectorAll('.svc-btn,.type-btn,.time-btn,.extra-btn').forEach(b => b.classList.remove('selected'));
+        document.querySelectorAll('#time-btns .time-btn').forEach(b => { if(b.textContent==='Fleksibel') b.classList.add('selected'); });
+        bState = { services:{}, extras:{}, size:'s', carLabel:'', time:'Fleksibel' };
+        document.getElementById('f-tidspunkt').value = 'Fleksibel';
+        document.getElementById('custom-time-wrap').style.display = 'none';
+        document.getElementById('custom-time-input').value = '';
+        document.getElementById('booking-price-box').style.display = 'none';
+        const nb = document.getElementById('btn-step1');
+        nb.disabled = true; nb.style.opacity = '.35'; nb.style.cursor = 'not-allowed';
+        setTimeout(() => { ok.style.display = 'none'; goStep(1); }, 9000);
+      } else {
+        ok.textContent = '⚠️ Noe gikk galt. Prøv igjen eller ring oss direkte.';
+        ok.style.display = 'block';
+        setTimeout(() => ok.style.display = 'none', 7000);
+      }
+    } catch(_) {
+      ok.textContent = '⚠️ Nettverksfeil. Sjekk internettforbindelsen og prøv igjen.';
+      ok.style.display = 'block';
+      setTimeout(() => ok.style.display = 'none', 7000);
+    } finally {
+      btn.disabled = false;
+      btn.textContent = 'Send bestilling →';
+    }
+  }
+
+  // FAQ accordion
+  function toggleFaq(btn) {
+    btn.closest('.faq-item').classList.toggle('open');
+    btn.setAttribute('aria-expanded', btn.getAttribute('aria-expanded') === 'true' ? 'false' : 'true');
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('f-dato').min = new Date().toISOString().split('T')[0];
+  });
+
+  // Prismatrise (brukt av booking-prisvisning)
+  const calcPrices = {
+    innv: {s:1200,m:1400,l:1700,xl:2200},
+    prem: {s:1700,m:1900,l:2200,xl:2800},
+    diam: {s:2600,m:2900,l:3400,xl:4200},
+    pol:  {s:3500,m:4000,l:4800,xl:6000},
+    coat: {s:8000,m:9500,l:12000,xl:15000},
+    felg: {s:3500,m:3500,l:4000,xl:5000}
+  };
+</script>
+</body>
+</html>
