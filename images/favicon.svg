@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="7" fill="#07090B"/>
+  <!-- Crystal diamond shape -->
+  <path d="M16 4 L28 12 L16 28 L4 12 Z" fill="none" stroke="#3AADE0" stroke-width="1.5"/>
+  <!-- Top-left facet -->
+  <path d="M4 12 L16 12 L16 4 Z" fill="#3AADE0" opacity="0.85"/>
+  <!-- Top-right facet -->
+  <path d="M28 12 L16 12 L16 4 Z" fill="#1E8FBF" opacity="0.85"/>
+  <!-- Bottom-left facet -->
+  <path d="M4 12 L16 28 L16 12 Z" fill="#3AADE0" opacity="0.4"/>
+  <!-- Bottom-right facet -->
+  <path d="M28 12 L16 12 L16 28 Z" fill="#1E8FBF" opacity="0.4"/>
+</svg>

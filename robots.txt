@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://crystalcarwash.no/sitemap.xml
