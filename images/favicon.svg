@@ -1,37 +1,46 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <!-- White rounded background -->
-  <rect width="32" height="32" rx="5" fill="#fff"/>
+  <!-- White background -->
+  <rect width="32" height="32" rx="5" fill="#ffffff"/>
 
-  <!-- Outer diamond shape -->
-  <path d="M7,2 L25,2 L31,11 L16,30 L1,11 Z"
+  <!-- Outer diamond -->
+  <path d="M7,2 L25,2 L31,12 L16,30 L1,12 Z"
         fill="none" stroke="#3AADE0" stroke-width="2" stroke-linejoin="round"/>
 
-  <!-- Inner diamond shape -->
-  <path d="M10,5 L22,5 L26,11 L16,26 L6,11 Z"
+  <!-- Inner diamond -->
+  <path d="M10,5 L22,5 L27,12 L16,27 L5,12 Z"
         fill="none" stroke="#3AADE0" stroke-width="1" stroke-linejoin="round"/>
 
-  <!-- Top facet fill -->
-  <path d="M10,5 L22,5 L26,11 L6,11 Z" fill="#3AADE0" opacity="0.18"/>
+  <!-- Upper facet shading -->
+  <path d="M10,5 L22,5 L27,12 L5,12 Z" fill="#3AADE0" opacity="0.12"/>
 
-  <!-- Car body -->
-  <rect x="9.5" y="15.5" width="13" height="4" rx="0.8" fill="#1a1a2a"/>
-
-  <!-- Car cabin/roof -->
-  <path d="M12,15.5 L13.5,12.5 L18.5,12.5 L20,15.5 Z" fill="#1a1a2a"/>
+  <!-- Car roof (narrow top) -->
+  <path d="M13,12.5 L19,12.5 L22,16 L10,16 Z" fill="#111"/>
 
   <!-- Windshield highlight -->
-  <path d="M13.2,15.3 L14.2,13 L17.8,13 L18.8,15.3 Z" fill="#3AADE0" opacity="0.45"/>
+  <path d="M13.5,12.7 L18.5,12.7 L21,15.8 L11,15.8 Z" fill="#3AADE0" opacity="0.22"/>
 
-  <!-- Wheel left -->
-  <circle cx="12.5" cy="19.8" r="2" fill="#1a1a2a"/>
-  <circle cx="12.5" cy="19.8" r="0.8" fill="#3AADE0" opacity="0.5"/>
+  <!-- Car body / hood -->
+  <rect x="10" y="16" width="12" height="3.5" rx="0.4" fill="#111"/>
 
-  <!-- Wheel right -->
-  <circle cx="19.5" cy="19.8" r="2" fill="#1a1a2a"/>
-  <circle cx="19.5" cy="19.8" r="0.8" fill="#3AADE0" opacity="0.5"/>
+  <!-- Left headlight (outer dark ring) -->
+  <circle cx="12.2" cy="17.8" r="2" fill="#111"/>
+  <!-- Left headlight (inner blue glow) -->
+  <circle cx="12.2" cy="17.8" r="1.1" fill="#3AADE0" opacity="0.85"/>
 
-  <!-- Water bubble dots (top of car) -->
-  <circle cx="14" cy="11.5" r="0.8" fill="#3AADE0" opacity="0.7"/>
-  <circle cx="16" cy="10.5" r="0.9" fill="#3AADE0" opacity="0.8"/>
-  <circle cx="18" cy="11.5" r="0.7" fill="#3AADE0" opacity="0.6"/>
+  <!-- Right headlight (outer dark ring) -->
+  <circle cx="19.8" cy="17.8" r="2" fill="#111"/>
+  <!-- Right headlight (inner blue glow) -->
+  <circle cx="19.8" cy="17.8" r="1.1" fill="#3AADE0" opacity="0.85"/>
+
+  <!-- Centre grille -->
+  <rect x="14.2" y="17" width="3.6" height="2" rx="0.4" fill="#2a2a3a"/>
+
+  <!-- Water wave below car -->
+  <path d="M10,21 Q13,19.5 16,21 Q19,22.5 22,21"
+        fill="none" stroke="#3AADE0" stroke-width="1.1" stroke-linecap="round" opacity="0.85"/>
+
+  <!-- Soap bubbles above car -->
+  <circle cx="13.8" cy="11.5" r="0.75" fill="#3AADE0" opacity="0.85"/>
+  <circle cx="16"   cy="10.4" r="0.95" fill="#3AADE0"/>
+  <circle cx="18.2" cy="11.5" r="0.65" fill="#3AADE0" opacity="0.75"/>
 </svg>
